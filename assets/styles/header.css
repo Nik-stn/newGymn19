@@ -1,0 +1,27 @@
+.header-top {
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.header-top img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.header-top a {
+    vertical-align: middle;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.header-top a:hover {
+    cursor: pointer;
+}
+
+/* .header-top-item span {
+    display: none;
+} */
