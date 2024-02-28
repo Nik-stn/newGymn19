@@ -29,6 +29,7 @@ body {
     min-width: 320px;
     color: #2E3332;
     height: 100vh;
+    font-size: minmax (12px, 0.9vw);
 }
 
 a {
@@ -38,6 +39,10 @@ a {
 
 ul {
     list-style-type: none;
+}
+
+.site-content {
+    background: url(../images/background.jpg);
 }
 
 .site-content {
