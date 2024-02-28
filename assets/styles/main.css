@@ -23,18 +23,21 @@
     outline: 0;
 }
 
+html, body {
+    height: 100vh;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     min-width: 320px;
     color: #2E3332;
-    height: 100vh;
-    font-size: minmax (12px, 0.9vw);
+    font-size: clamp(12px, 0.9vw, 18px);
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: #fff;
 }
 
 ul {

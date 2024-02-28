@@ -11,12 +11,14 @@
 .header-top img {
     vertical-align: middle;
     margin-right: 5px;
-    width: 1.6vw;
+    width: clamp(20px, 16vw, 30px);
 }
+
 
 .header-top a {
     vertical-align: middle;
     display: inline-block;
+    color: inherit;
     padding: 5px 0;
 }
 
@@ -32,17 +34,17 @@
 }
 
 .header-logo img {
-    width: 15vw;
+    width: clamp(150px, 15vw, 300px);
 }
 
 .header-title h1, .header-title h2 {
     font-weight: 700;
-    font-size: 1.5vw;
+    font-size: clamp(18px, 1.5vw, 32px);
     text-align: center;
 }
 
 .header-title h1 {
-    font-size: 2vw;
+    font-size: clamp(24px, 2vw, 40px);
 }
 
 .header-buttons-box {
@@ -55,9 +57,8 @@
 
 .header-button {
     display: flex;
-    color: #fff;
     height: 32px;
-    width: 7vw;
+    width: clamp(85px, 7vw, 200px);
     border-radius: 56px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #005B14 46.1%, #80D0C7 100%);
     align-items: center;
