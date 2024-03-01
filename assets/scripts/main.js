@@ -1,7 +1,8 @@
-const myCarouselElement = document.querySelector('#myCarousel')
+const myCarouselElement = document.querySelector("#myCarousel");
 
 const carousel = new bootstrap.Carousel(myCarouselElement, {
-  interval: 2000,
+  interval: 3000,
   touch: true,
   pause: "hover",
-})
+  wrap: true,
+});

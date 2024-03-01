@@ -1,3 +1,36 @@
 .slider-popular {
     grid-template-columns: 0.6fr 0.4fr;
 }
+
+.carousel-inner{
+    border: 3px solid #00AF26;
+    position: relative;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    opacity: 1;
+    border-radius: 20px;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 47px;
+    width: 26px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../images/slider/prev.svg);
+}
+
+.carousel-control-next-icon {
+     background-image: url(../images/slider/next.svg);
+}
+
