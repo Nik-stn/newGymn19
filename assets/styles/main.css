@@ -27,6 +27,22 @@ html, body {
     height: 100vh;
 }
 
+html::-webkit-scrollbar {
+    width: 15px;
+}
+
+html::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+html::-webkit-scrollbar-thumb {
+    background:  #005B14;
+    border: 3px solid #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px 0px #f4f4f433;
+    
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
@@ -65,4 +81,13 @@ ul {
 
 .main {
     flex: 1 1 auto;
+}
+
+.section {
+    padding: 20px 10px 10px;
+}
+
+.section-inner {
+    display: grid;
+    gap: 10px;
 }
