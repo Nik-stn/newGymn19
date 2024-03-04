@@ -5,7 +5,6 @@
 .announcement {
     border: 2px solid #005B14;
     border-radius: 10px;
-    height: 1000px;
     border-top: 0;
 }
 
@@ -30,4 +29,53 @@
 .announcement-tabs-btn.active {
     background: #00AF26;
     border-radius: 6px;
+}
+
+.announcement-gymn {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    gap: 20px;
+    padding: 12px 17px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.announcement-gymn a {
+    color: #2E3332;
+}
+
+.announcement-gymn a:hover {
+    transition: all .3s ease-in-out;
+    color: #00AF26;
+}
+
+.announcement-sch-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #0000001A;
+    box-shadow: 1px 3px 4px 0px #0000001A;
+}
+
+.announcement-image {
+    width: 100%;
+}
+
+.announcement-image img {
+    width: 100%;
+}
+
+.annuncement-info {
+    margin-top: 7px;
+    padding: 0 6px;
+}
+
+.announcement-date {
+    color: #888888;
+    margin-bottom: 0.5em;
+    font-size: clamp(10px, 0.9vw, 14px);
+}
+
+.announcement-date img {
+    margin-right: 8px;
 }
