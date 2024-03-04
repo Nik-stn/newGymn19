@@ -1,0 +1,33 @@
+.announcement-news {
+    grid-template-columns: 0.5fr 0.5fr;
+}
+
+.announcement {
+    border: 2px solid #005B14;
+    border-radius: 10px;
+    height: 1000px;
+    border-top: 0;
+}
+
+.announcement-tab {
+    background: #005B14;
+    height: 50px;
+    padding: 0px 16px 0px 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.announcement-tabs-btn {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+    padding: 0px 4px 0px 4px;
+}
+
+.announcement-tabs-btn.active {
+    background: #00AF26;
+    border-radius: 6px;
+}
