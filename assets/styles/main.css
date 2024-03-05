@@ -48,7 +48,7 @@ body {
     font-weight: 400;
     min-width: 320px;
     color: #2E3332;
-    font-size: clamp(12px, 0.9vw, 18px);
+    font-size: clamp(12px, 1vw, 18px);
     line-height: 1.2;
 }
 

@@ -55,7 +55,7 @@
     color: #2E3332;
 }
 
-.announcement-gymn-item a:hover {
+.announcement-gymn-item a:hover, .visiting-card-gymn a:hover {
     transition: all .3s ease-in-out;
     color: #00AF26;
 }
@@ -98,7 +98,8 @@
 }
 
 .announcement-gymn-archive-link {
-    height: 44px;
+    text-align: center;
+    width: clamp(150px, 13vw, 250px);
     padding: 12px 8px;
     border-radius: 6px;
     background: radial-gradient(88.4% 741.88% at 70.59% 0%, #80D0C7 0%, #005B14 47.5%);
@@ -131,4 +132,18 @@
     border-radius: 6px;
     transition: all 0.3s ease;
     transform: scale(.1);
+}
+
+.visiting-card-gymn a {
+    color: #005B14;
+    font-weight: 700;
+}
+
+.visiting-card-gymn p {
+    padding: 0.5em 1em;
+}
+
+.gymn-safe-map img {
+    padding: 0.5em 1em;~
+    width: 100%;
 }
