@@ -84,34 +84,34 @@ function onAnnouncementTabClick(items) {
     });
 }
 
-// Проверяем, есть ли сохраненный ID активного таба в sessionStorage
-const activeAnnouncementTabId = sessionStorage.getItem('activeAnnouncementTab');
-if (activeAnnouncementTabId) {
-    const activeAnnouncementTab = document.querySelector(activeAnnouncementTabId);
-    if (activeAnnouncementTab) {
-        // Если найден сохраненный таб, добавляем ему класс 'active'
-        document.getElementById('announcement-btn-1').classList.remove('active');
-        document.getElementById('announcement-tab-1').classList.remove('active');
-        activeAnnouncementTab.classList.add('active');
-    }
-}
+// // Проверяем, есть ли сохраненный ID активного таба в sessionStorage
+// const activeAnnouncementTabId = sessionStorage.getItem('activeAnnouncementTab');
+// if (activeAnnouncementTabId) {
+//     const activeAnnouncementTab = document.querySelector(activeAnnouncementTabId);
+//     if (activeAnnouncementTab) {
+//         // Если найден сохраненный таб, добавляем ему класс 'active'
+//         document.getElementById('announcement-btn-1').classList.remove('active');
+//         document.getElementById('announcement-tab-1').classList.remove('active');
+//         activeAnnouncementTab.classList.add('active');
+//     }
+// }
 
-// Проверяем, есть ли сохраненная активная константа в sessionStorage
-const activeAnnouncementTabBtnId = sessionStorage.getItem('activeAnnouncementTabBtn');
-if (activeAnnouncementTabBtnId) {
-    const activeAnnouncementTabBtn = document.querySelector('#' + activeAnnouncementTabBtnId);
-    if (activeAnnouncementTabBtn) {
-        // Если найдена сохраненная активная константа, добавляем ей класс 'active'
-        activeAnnouncementTabBtn.classList.remove('active');
-        activeAnnouncementTabBtn.classList.add('active');
-    }
-}
+// // Проверяем, есть ли сохраненная активная константа в sessionStorage
+// const activeAnnouncementTabBtnId = sessionStorage.getItem('activeAnnouncementTabBtn');
+// if (activeAnnouncementTabBtnId) {
+//     const activeAnnouncementTabBtn = document.querySelector('#' + activeAnnouncementTabBtnId);
+//     if (activeAnnouncementTabBtn) {
+//         // Если найдена сохраненная активная константа, добавляем ей класс 'active'
+//         activeAnnouncementTabBtn.classList.remove('active');
+//         activeAnnouncementTabBtn.classList.add('active');
+//     }
+// }
 
 
-// const radioInput = document.querySelectorAll('.announcement-poll input[type="radio"]');
-// const checkboxInput = document.querySelectorAll('.announcement-poll input[type="checkbox"]');
-// const spanRadio = document.querySelectorAll('.announcement-poll input[type="radio"]~span');
-// const spanCheckbox = document.querySelectorAll('.announcement-poll input[type="checkbox"]~span');
+const radioInput = document.querySelectorAll('.announcement-poll input[type="radio"]');
+const checkboxInput = document.querySelectorAll('.announcement-poll input[type="checkbox"]');
+const spanRadio = document.querySelectorAll('.announcement-poll input[type="radio"]~span');
+const spanCheckbox = document.querySelectorAll('.announcement-poll input[type="checkbox"]~span');
 
-// spanRadio.forEach( item => item.classList.add('poll-radio'))
-// spanCheckbox.forEach( item => item.classList.add('poll-checkbox'))
+spanRadio.forEach( item => item.classList.add('poll-radio'))
+spanCheckbox.forEach( item => item.classList.add('poll-checkbox'))
