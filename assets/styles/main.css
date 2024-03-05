@@ -49,6 +49,7 @@ body {
     min-width: 320px;
     color: #2E3332;
     font-size: clamp(12px, 0.9vw, 18px);
+    line-height: 1.2;
 }
 
 a {
