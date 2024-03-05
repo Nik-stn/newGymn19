@@ -36,6 +36,14 @@
     border-radius: 6px;
 }
 
+.announcement-tabs-item.active {
+    display: block;
+}
+
+.announcement-tabs-item {
+    display: none;
+}
+
 .announcement-gymn {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
@@ -43,16 +51,16 @@
     padding: 12px 17px;
 }
 
-.announcement-gymn a {
+.announcement-gymn-item a {
     color: #2E3332;
 }
 
-.announcement-gymn a:hover {
+.announcement-gymn-item a:hover {
     transition: all .3s ease-in-out;
     color: #00AF26;
 }
 
-.announcement-sch-item {
+.announcement-gymn-item {
     display: flex;
     flex-direction: column;
     align-items: center;
