@@ -44,7 +44,7 @@
     display: none;
 }
 
-.announcement-gymn, .announcement-poll, .news-gymn {
+.announcement-gymn, .announcement-poll, .news-gymn, .news-rss {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
     gap: 20px;
@@ -60,7 +60,7 @@
     color: #00AF26;
 }
 
-.announcement-gymn-item, .announcement-poll-item, .news-gymn-item {
+.announcement-gymn-item, .announcement-poll-item, .news-gymn-item, .news-rss-item {
     display: flex;
     flex-direction: column;
     align-items: center;
