@@ -1,38 +1,38 @@
-// const newsTabsBtn = document.querySelectorAll(".news-tabs-btn");
-// const newsItems = document.querySelectorAll(".news-tabs-item");
+const newsTabsBtn = document.querySelectorAll(".news-tabs-btn");
+const newsItems = document.querySelectorAll(".news-tabs-item");
 const announcementTabsBtn = document.querySelectorAll(".announcement-tabs-btn");
 const announcementItems = document.querySelectorAll(".announcement-tabs-item");
 
-// newsTabsBtn.forEach(onNewsTabClick);
+newsTabsBtn.forEach(onNewsTabClick);
 announcementTabsBtn.forEach(onAnnouncementTabClick)
 
 
 //News
-// function onNewsTabClick(item) {
-//     item.addEventListener("click", function () {
-//         const currentBtn = item;
-//         const tabId = currentBtn.getAttribute("data-tab");
-//         const currentTab = document.querySelector(tabId);
+function onNewsTabClick(item) {
+    item.addEventListener("click", function () {
+        const currentBtn = item;
+        const tabId = currentBtn.getAttribute("data-tab");
+        const currentTab = document.querySelector(tabId);
 
-//         if (!currentBtn.classList.contains('active')) {
-//             newsTabsBtn.forEach(function (item) {
-//                 item.classList.remove('active');
-//             });
+        if (!currentBtn.classList.contains('active')) {
+            newsTabsBtn.forEach(function (item) {
+                item.classList.remove('active');
+            });
 
-//             newsItems.forEach(function (item) {
-//                 item.classList.remove('active');
-//             });
+            newsItems.forEach(function (item) {
+                item.classList.remove('active');
+            });
 
-//             currentBtn.classList.add('active');
-//             currentTab.classList.add('active');
+            currentBtn.classList.add('active');
+            currentTab.classList.add('active');
 
-//             // Сохраняем ID активного таба в sessionStorage
-//             sessionStorage.setItem('activeNewsTab', tabId);
-//             sessionStorage.setItem('activeNewsTabBtn', currentBtn.getAttribute('id'));
+            // Сохраняем ID активного таба в sessionStorage
+            sessionStorage.setItem('activeNewsTab', tabId);
+            sessionStorage.setItem('activeNewsTabBtn', currentBtn.getAttribute('id'));
 
-//         }
-//     });
-// }
+        }
+    });
+}
 
 // // Проверяем, есть ли сохраненный ID активного таба в sessionStorage
 // const activeNewsTabId = sessionStorage.getItem('activeNewsTab');

@@ -3,11 +3,21 @@
     gap: 40px;
 }
 
-.carousel-inner{
+.carousel-inner {
     border: 3px solid #00AF26;
     position: relative;
     border-radius: 20px;
     z-index: 1;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 50vh;
+}
+
+.carousel-inner img {
+    max-width: 100%;
+    height: 100%;
 }
 
 .carousel-control-next,
