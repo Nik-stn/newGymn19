@@ -3,14 +3,22 @@
     gap: 40px;
 }
 
-.carousel-inner {
+.slider {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-inner {
     border: 3px solid #00AF26;
     position: relative;
     border-radius: 20px;
     z-index: 1;
+    overflow: hidden;
 }
 
-.carousel-item {
+.carousel-item, .owl-carousel .owl-item img {
     width: 100%;
     height: 50vh;
 }
@@ -18,6 +26,32 @@
 .carousel-inner img {
     max-width: 100%;
     height: 100%;
+}
+
+.owl-theme div.owl-nav {
+    margin: 0;
+}
+
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    max-width: 50px;
+}
+
+.owl-nav button span {
+    font-size: 60px;
+    color: linear-gradient(180deg, #005B4B 0%, #80D0C7 48.5%, #005B14 100%);
+}
+
+.owl-nav button.owl-prev {
+    left: 0;
+}
+
+.owl-nav button.owl-next {
+    right: 0;
 }
 
 .carousel-control-next,
