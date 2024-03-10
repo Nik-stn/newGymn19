@@ -3448,7 +3448,7 @@
 })(window.Zepto || window.jQuery, window, document);
 
 
-$('.owl-carousel').owlCarousel({
+$('.owl-carousel.owl-slider').owlCarousel({
     responsiveClass:true,
 	nav:true,
 	loop:true,
@@ -3457,4 +3457,27 @@ $('.owl-carousel').owlCarousel({
     autoplayHoverPause:true,
 	dots:false,
 	items:1,
+})
+
+$('.owl-carousel.owl-banner').owlCarousel({
+    responsiveClass:true,
+	nav:true,
+	loop:true,
+	margin:14,
+	autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true,
+	dots:false,
+	autoWidth:true,
+	responsive:{
+        0:{
+            items:3,
+        },
+        600:{
+            items:7,
+        },
+        1000:{
+            items:10,
+        }
+    }
 })

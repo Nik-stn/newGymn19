@@ -45,3 +45,39 @@
     margin-bottom: 20px;
     color: #fff;
 }
+
+.banners .owl-carousel .owl-item img {
+    height: 50px;
+}
+
+.banners .owl-theme div.owl-nav {
+    margin: 0;
+}
+
+.banners .owl-theme .owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    max-width: 20px;
+    margin: 0;
+}
+
+.banners .owl-theme .owl-nav button:hover {
+    background: #00000066;
+}
+
+.banners .owl-nav button span {
+    font-size: 50px;
+    color: #00AF26;
+    font-weight: 700;
+}
+
+.banners .owl-nav button.owl-prev {
+    left: 0;
+}
+
+.banners .owl-nav button.owl-next {
+    right: 0;
+}
