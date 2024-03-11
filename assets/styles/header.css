@@ -102,6 +102,7 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
 .header-nav.fixed {
@@ -112,11 +113,12 @@
 }
 
 .header-nav-pc .nav-home img {
-    width: clamp(20px, 2vw, 30px);
+    width: clamp(15px, 2vw, 20px);
 }
 
 .header-nav-pc .nav-home {
     margin: 0 5px;
+    line-height: 0;
 }
 
 .header-nav-pc .level_0 {

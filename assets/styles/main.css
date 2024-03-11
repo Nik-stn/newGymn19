@@ -119,7 +119,7 @@ h3 {
     position: fixed;
     right: 1%;
     bottom: 1%;
-    z-index: 10000;
+    z-index: 19;
     background: #00af26;
     border-radius: 10px;
     opacity: 0.6;
