@@ -120,6 +120,7 @@
 .header-nav-pc .parent>a {
     display: flex;
     align-items: center;
+    text-align: center;
     height: 50px;
     color: #fff;
     margin: 0 5px;
@@ -231,7 +232,20 @@
 }
 
 /* Adaptive */
+@media (max-width: 900px) {
+    .header-nav-pc .parent>a {
+        margin: 0 3px;
+        padding: 0 5px;
+    }
+}
+
 @media (max-width: 768px) {
+    .header-nav {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+
     .header-top-item span {
         display: none;
     }
