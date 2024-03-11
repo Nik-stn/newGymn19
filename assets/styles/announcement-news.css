@@ -82,6 +82,8 @@
 }
 
 .announcement-date, .news-date, .news-rss-date {
+    display: flex;
+    align-items: center;
     color: #888888;
     margin-bottom: 0.5em;
     font-size: clamp(10px, 0.9vw, 14px);
