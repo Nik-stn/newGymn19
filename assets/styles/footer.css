@@ -1,5 +1,11 @@
 .footer {
     background: #24482E;
+    color: #CCCCCC;
+}
+
+.footer a:hover {
+    transition: all .3s ease-in-out;
+    color: #00AF26;
 }
 
 .gymn-map {
@@ -29,7 +35,6 @@
 }
 
 .footer-gymn-info {
-    color: #CCCCCC;
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-between;
@@ -80,4 +85,10 @@
 
 .banners .owl-nav button.owl-next {
     right: 0;
+}
+
+.footer-other {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
 }
