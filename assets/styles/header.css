@@ -14,7 +14,6 @@
     width: clamp(20px, 2vw, 30px);
 }
 
-
 .header-top a {
     vertical-align: middle;
     display: inline-block;
@@ -37,7 +36,8 @@
     width: clamp(150px, 15vw, 300px);
 }
 
-.header-title h1, .header-title h2 {
+.header-title h1,
+.header-title h2 {
     text-align: center;
     margin-bottom: 0.5rem;
 }
@@ -56,7 +56,7 @@
     width: clamp(85px, 7vw, 200px);
     border-radius: 56px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #005B14 46.1%, #80D0C7 100%);
-    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -79,7 +79,7 @@
 
 .header-button:hover:after {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #005B14 46.1%, #80D0C7 100%);
-    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
     transform: scale(1);
 }
 
@@ -130,12 +130,13 @@
     z-index: 1;
 }
 
-.header-nav-pc .parent>a:hover, .header-nav-pc .parent>span:hover {
+.header-nav-pc .parent>a:hover,
+.header-nav-pc .parent>span:hover {
     transition: all 0.3s ease 0s;
     cursor: pointer;
 }
 
-.header-nav-pc .parent>a:hover::before  {
+.header-nav-pc .parent>a:hover::before {
     transform: scaleY(1);
 }
 
@@ -199,7 +200,6 @@
     height: 30px;
 }
 
-
 #ya-site-form0 .ya-site-form__search-input-layout-r input.ya-site-form__submit {
     cursor: pointer;
     height: 24px;
@@ -226,17 +226,14 @@
     font-size: clamp(10px, 1vw, 14px);
 }
 
-
-
 #ya-site-form0 input.ya-site-form__submit:hover {
     transition: all .3s ease-in-out;
 }
 
+/* Adaptive */
+/* @media (max-width: 768px) {
+    .header-top-item span {
+        display: none;
+    }
 
-
-
-
-
-/* .header-top-item span {
-    display: none;
 } */

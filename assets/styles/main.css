@@ -112,3 +112,25 @@ h3 {
     display: grid;
     gap: 30px;
 }
+
+.scrooll-to-top {
+    display: none;
+    line-height: 0px;
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    z-index: 10000;
+    background: #00af26;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+
+.to-top-icon {
+    width: 45px;
+    height: 40px;
+}
+
+.scrooll-to-top:hover {
+    opacity: 1;
+    transition: all .3s linear;
+}
