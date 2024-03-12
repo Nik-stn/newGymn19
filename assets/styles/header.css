@@ -33,7 +33,7 @@
 }
 
 .header-logo img {
-    width: clamp(150px, 15vw, 300px);
+    width: clamp(140px, 15vw, 300px);
 }
 
 .header-title h1,
@@ -53,7 +53,7 @@
 .header-button {
     display: flex;
     height: 32px;
-    width: clamp(85px, 7vw, 200px);
+    width: clamp(80px, 7vw, 200px);
     border-radius: 56px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #005B14 46.1%, #80D0C7 100%);
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
@@ -242,6 +242,12 @@
 }
 
 /* Adaptive */
+@media (max-width: 1024px) {
+    .header-main {
+        padding: 0 10px;
+    }
+}
+
 @media (max-width: 900px) {
     .header-nav-pc .parent>a {
         margin: 0 3px;
