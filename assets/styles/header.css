@@ -206,10 +206,10 @@
     color: #fff;
 }
 
-.site_search {
+/* .site_search {
     width: 100%;
     max-width: 200px;
-}
+} */
 
 #ya-site-form0 .ya-site-form__form .ya-site-form__wrap {
     width: clamp(150px, 16vw, 300px);
@@ -236,7 +236,7 @@
     padding-left: 10px;
     font-size: clamp(10px, 1vw, 14px) !important;
     font-family: inherit;
-    width: 160px;
+    /* width: 160px; */
 }
 
 #ya-site-form0 .ya-site-form__input .ya-site-form__input-text::placeholder {
