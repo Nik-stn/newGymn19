@@ -1,0 +1,16 @@
+.aside {
+    border: 2px solid green;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 0.2fr;
+    gap: 30px;
+    margin: 35px 50px;
+}
+
+.article {
+    padding: 18px;
+    border: 3px solid #00AF26;
+    height: fit-content;
+}
