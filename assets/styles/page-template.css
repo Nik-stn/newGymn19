@@ -16,13 +16,10 @@
 }
 
 .breadcrumb {
-    margin-bottom: 25px;
-}
-
-.breadcrumb {
-	display: inline-block;
+    display: inline-block;
 	overflow: hidden;
 	border-radius: 5px;
+    margin-bottom: 25px;
 }
 
 .breadcrumb li {
@@ -96,7 +93,7 @@
 }
 
 .article-title {
-    margin-left: 64px;
+    margin-left: clamp(5px, 2vw, 64px);
 }
 
 .article-title + hr {
@@ -198,4 +195,122 @@
     transform: scaleY(0);
     z-index: -1;
     transition: transform 0.3s ease;
+}
+
+/* Adaptive */
+@media (max-width: 1400px) {
+    .breadcrumb {
+        margin-bottom: 18px;
+    }
+
+    .article-title + hr {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-grid {
+        gap: 20px;
+        margin: 20px 30px;
+    }
+
+    .article {
+        padding: 15px 11px;
+    }
+
+    .breadcrumb {
+        margin-bottom: 15px;
+    }
+
+    .article-title + hr {
+        margin: 10px 0;
+    }
+
+    .share-buttons-description {
+        margin: 13px 0 4px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-grid {
+        grid-template-columns: 0.75fr 0.25fr;
+        gap: 10px;
+        margin: 10px 15px;
+    }
+
+    .article {
+        padding: 10px 6px;
+    }
+
+    .breadcrumb {
+        margin-bottom: 10px;
+    }
+
+    .article-title + hr {
+        margin: 5px 0;
+    }
+
+    .share-buttons-description {
+        margin: 9px 0 2px;
+    }
+
+    .breadcrumb li a {
+        height: 24px;
+    }
+
+    .breadcrumb li:after {
+        right: -12px; 
+        width: 24px; 
+        height: 24px;
+    }
+
+    .breadcrumb li:last-child {
+        padding-right: 15px;
+    }
+
+    .breadcrumb li:first-child {
+        padding-left: 15px;
+    }
+
+    .breadcrumb li {
+        padding: 0 10px 0 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: auto;
+    }
+
+    .breadcrumb {
+        margin-bottom: 5px;
+    }
+
+    .breadcrumb li {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb li a {
+        height: 20px;
+    }
+
+    .breadcrumb li:after {
+        right: -10px; 
+        width: 20px; 
+        height: 20px;
+    }
+
+    .breadcrumb li:last-child {
+        padding-right: 5px;
+    }
+
+    .breadcrumb li:first-child {
+        padding-left: 5px;
+    }
+
+    .breadcrumb li {
+        padding: 0 10px 0 20px;
+    }
 }

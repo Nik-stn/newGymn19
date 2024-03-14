@@ -94,6 +94,7 @@
     justify-content: space-between;
 }
 
+/* Adaptive */
 @media (max-width: 1024px) {
     .gymn-map iframe {
         height: 300px;
