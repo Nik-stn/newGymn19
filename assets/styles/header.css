@@ -14,7 +14,7 @@
     width: clamp(20px, 2vw, 30px);
 }
 
-.header-top a {
+.header-top a, .header-top span {
     vertical-align: middle;
     display: inline-block;
     color: inherit;
