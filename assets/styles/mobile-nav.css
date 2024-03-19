@@ -24,6 +24,10 @@
         justify-content: center;
     }
 
+    .header-nav-mobile .level_1 input, .header-nav-mobile .level_1 .mobile-chevron {
+        display: none;
+    }
+
     .mobile-site-nav {
         position: fixed;
         top: 0;
@@ -39,7 +43,7 @@
         overflow-y: auto;
     }
     
-    .mobile-menu-checkbox:checked~.level_0 {
+    .mobile-menu-checkbox:checked~.mobile-site-nav  {
         transform: none;
     }
     

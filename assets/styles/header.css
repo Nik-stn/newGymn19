@@ -14,7 +14,7 @@
     width: clamp(20px, 2vw, 30px);
 }
 
-.header-top a, .header-top span {
+.header-top a, .header-top .header-site-map span, .header-top .header-vision span {
     vertical-align: middle;
     display: inline-block;
     color: inherit;
@@ -114,6 +114,12 @@
 
 .header-nav-pc .nav-home img {
     width: clamp(15px, 2vw, 20px);
+}
+
+.header-nav-pc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-nav-pc .nav-home {
@@ -223,7 +229,6 @@
     text-indent: -9999px;
     border: 0;
     margin: -1px;
-    background: #fff url(../images/header/search.svg) 50% no-repeat;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
 }
@@ -268,8 +273,7 @@
         padding: 0 10px;
     }
 
-
-    .header-top-item span {
+    .header-top-item .header-site-map span, .header-top-item .header-vision span {
         display: none;
     }
 

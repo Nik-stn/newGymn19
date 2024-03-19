@@ -1,0 +1,7 @@
+.site-content {
+    background: url(../images/background.jpg);
+}
+
+#ya-site-form0 .ya-site-form__search-input-layout-r input.ya-site-form__submit {
+    background: #fff url(../images/header/search.svg) 50% no-repeat;
+}
