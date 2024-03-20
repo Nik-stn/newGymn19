@@ -67,12 +67,19 @@
     left: 0px;
     width: 100%;
     background: #0000006e;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px;  
 }
 
 .owl-container figcaption a {
-    padding: 12px;  
     display: block;
     font-weight: 700;
+}
+
+.owl-container figcaption a:hover {
+    color: #00e932;
+    transition: all .3s ease-in-out;
 }
 
 .popular-title {
