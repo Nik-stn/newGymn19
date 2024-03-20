@@ -56,6 +56,25 @@
     right: 0;
 }
 
+.owl-container {
+    position: relative;
+}
+
+.owl-container figcaption {
+    position: absolute;
+    z-index: 10;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background: #0000006e;
+}
+
+.owl-container figcaption a {
+    padding: 12px;  
+    display: block;
+    font-weight: 700;
+}
+
 .popular-title {
     text-align: center;
     margin-bottom: 16px;
