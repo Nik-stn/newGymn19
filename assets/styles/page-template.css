@@ -52,10 +52,10 @@
 }
 
 /*hover/active styles*/
-.breadcrumb li.active, .breadcrumb li:hover{
+.breadcrumb li:last-child, .breadcrumb li:hover{
 	background: #00AF26;
 }
-.breadcrumb li.active:after, .breadcrumb li:hover:after {
+.breadcrumb li:last-child:after, .breadcrumb li:hover:after {
 	background: #00AF26;
 }
 
@@ -137,6 +137,14 @@
     border-bottom: 2px solid #2E3332;
 }
 
+.aside .level_0 .parent ul {
+    display: none;
+}
+
+.aside .level_0 li.active ul, .aside .level_0 li.parent_active ul {
+    display: block;
+}
+
 .aside .level_1, .aside .level_2 {
     border-top: 2px solid #2E3332;
 }
@@ -148,7 +156,7 @@
 .aside .level_2 li {
     background: #00AF26;
 }
-.aside .level_2 li.active {
+.aside li.active {
     background: #00DE31;
 }
 
