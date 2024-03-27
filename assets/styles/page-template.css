@@ -101,6 +101,19 @@
     margin: 20px 0;
 }
 
+.content-box, .article {
+    overflow-x: auto;
+}
+
+.content-box a {
+    color: #005B14;
+}
+
+.content-box a:hover {
+    transition: all .3s ease-in-out;
+    color: #00AF26;
+}
+
 .share-buttons-description {
     margin: 18px 0 6px;
 }
