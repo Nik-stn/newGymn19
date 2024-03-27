@@ -35,3 +35,11 @@
     padding: 5pt 10pt;
 
 }
+
+.content-box table {
+    width: 100%;
+}
+
+.content-box table td {
+    padding: 0 5px;
+}
