@@ -43,3 +43,70 @@
 .content-box table td {
     padding: 0 5px;
 }
+
+/*--------------------------------------------------------*/
+/* Вкладки на главной: пользовательская тема edu_by theme */
+/*--------------------------------------------------------*/
+
+.ajax__tab_default .ajax__tab_tab {
+    padding: 4px 1em 0;
+    margin-right: 0 !important;
+    text-align: left !important;
+    cursor: pointer;
+    display: -moz-inline-box;
+    display: inline-block;
+    line-height: 1.2em;
+    overflow: auto;
+}
+
+.edu_by .ajax__tab_header {
+    font-size: 1em;
+}
+
+.edu_by .ajax__tab_header .ajax__tab_outer {
+    border-radius: 3px 3px 0 0;
+    background: #E2F3FF;
+    margin-right: 1px;
+}
+
+.edu_by .ajax__tab_header .ajax__tab_outer:hover {
+    background: #a0ccec;
+}
+
+.edu_by .ajax__tab_header .ajax__tab_tab {
+    font-size: 0.9em;
+}
+
+.link-button:hover {
+    background: #d1ecff;
+    text-decoration: none;
+}
+
+
+.edu_by .ajax__tab_active .ajax__tab_outer {
+    background: #a0ccec;
+    font-weight: bold;
+}
+
+.edu_by .ajax__tab_active .ajax__tab_tab {
+    font-size: 1em;
+}
+
+.edu_by .ajax__tab_body {
+    font-size: 1em;
+    border: 2px solid #a0ccec;
+    padding: 1em;
+    background-size: 300px 450px;
+}
+
+#content .ajax__tab_body h1 {
+    font-size: 1.3em;
+    text-align: right;
+    padding-bottom: 0.3em;
+    margin: 0 auto 0.5em;
+    border-bottom: dotted 2px #A4C8E2;
+}
+
+.ajax__tab_inner {
+    overflow-wrap: break-word;
+}
