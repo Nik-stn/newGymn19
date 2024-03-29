@@ -13,6 +13,7 @@
 
 .article h1, .article h2, .article h3 {
     font-size: revert;
+    margin: revert;
 }
 
 .breadcrumb {
@@ -92,7 +93,7 @@
 	content: none;
 }
 
-.article-title {
+.article .article-title {
     margin-left: clamp(5px, 2vw, 64px);
 }
 
