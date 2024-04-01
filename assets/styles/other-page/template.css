@@ -102,6 +102,10 @@
     margin: 20px 0;
 }
 
+.content-box * {
+    margin: revert;
+}
+
 .content-box, .article {
     overflow-x: auto;
 }
