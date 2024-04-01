@@ -168,6 +168,10 @@
     overflow: hidden;
 }
 
+.excerpt:last-child {
+    border-bottom: none;
+}
+
 .entry_spoiler.excerpt {
     padding: 0;
     border-radius: 43px;
