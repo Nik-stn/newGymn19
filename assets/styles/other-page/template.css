@@ -115,8 +115,23 @@
 }
 
 .content-box a:hover {
-    transition: all .3s ease-in-out;
+    transition: all .05s ease-in-out;
     color: #00AF26;
+    font-weight: 700;
+}
+
+.content-box .map-site img {
+    display: none;
+}
+
+.content-box .map-site ul {
+    list-style-position: inside;
+    list-style-type: square;
+    line-height: 1.6;
+}
+
+.content-box .map-site ul ul {
+    margin-left: 1.6em;
 }
 
 .share-buttons-description {
