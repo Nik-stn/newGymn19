@@ -299,3 +299,67 @@ ul.no-list .name {
     border-radius: 0;
     margin-bottom: 20px;
 }
+
+.thumbs {
+    list-style-type: none;
+    padding: 1em 1em 2em;
+    border-top: solid 2px #005B14;
+    margin-top: 0;
+}
+
+.thumbs li {
+    display: inline-block;
+}
+
+.thumbs_box h3 {
+    color: #fff;
+    font-size: 1em;
+    padding: 0 1em;
+    background: #005B14;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    line-height: 1.6em;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.thumbs a img {
+    border: solid 3px #00AF26;
+    width: 120px;
+    height: 90px;
+    transition: all 0.2s ease-in .1s;
+}
+
+.thumbs a:hover {
+    z-index: 999;
+}
+
+.thumbs a:hover img {
+    transform: scale(1.2);
+}
+
+.thumbs-random {
+    padding: 1em 0 2em;
+    border-top: none;
+}
+
+.content-box .post.poll-result {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-box .post.poll-result h2 {
+    width: 100%;
+}
+
+.content-box .post.poll-result .fleft {
+    margin-left: 20px;
+}
+
+.content-box .poll-result-stats .pos {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+    border-radius: 1.5em;
+}
