@@ -36,21 +36,6 @@
 
 }
 
-.content-box table {
-    width: 100%;
-    border-collapse: collapse;
-    border-color: #00af26;
-    overflow: hidden;
-}
-
-.content-box table p {
-    margin: 0.4em auto 0.6em;
-}
-
-.content-box table td {
-    padding: 0 5px;
-}
-
 .content-box .edu_by .ajax__tab_tab {
     cursor: pointer;
     display: flex;
