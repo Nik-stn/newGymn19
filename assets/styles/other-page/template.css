@@ -13,6 +13,7 @@
 
 .article h1, .article h2, .article h3 {
     font-size: revert;
+    margin: revert;
 }
 
 .breadcrumb {
@@ -92,13 +93,17 @@
 	content: none;
 }
 
-.article-title {
+.article .article-title {
     margin-left: clamp(5px, 2vw, 64px);
 }
 
 .article-title + hr {
     border: 1px solid #005B4B;
     margin: 20px 0;
+}
+
+.content-box * {
+    margin: revert;
 }
 
 .content-box, .article {
@@ -110,8 +115,23 @@
 }
 
 .content-box a:hover {
-    transition: all .3s ease-in-out;
+    transition: all .05s ease-in-out;
     color: #00AF26;
+    font-weight: 700;
+}
+
+.content-box .map-site img {
+    display: none;
+}
+
+.content-box .map-site ul {
+    list-style-position: inside;
+    list-style-type: square;
+    line-height: 1.6;
+}
+
+.content-box .map-site ul ul {
+    margin-left: 1.6em;
 }
 
 .share-buttons-description {
@@ -217,6 +237,22 @@
     z-index: -1;
     transition: transform 0.3s ease;
 }
+
+.content-box table {
+    width: 100%;
+    border-collapse: collapse;
+    border-color: #00af26;
+    overflow: hidden;
+}
+
+.content-box table p {
+    margin: 0.4em auto 0.6em;
+}
+
+.content-box table td {
+    padding: 0 5px;
+}
+
 
 /* Adaptive */
 @media (max-width: 1400px) {

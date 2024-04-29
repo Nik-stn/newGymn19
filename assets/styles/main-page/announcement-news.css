@@ -51,6 +51,7 @@
     height: 100%;
     cursor: pointer;
     padding: 0px 4px;
+    margin: 0;
 }
 
 /* .announcement-tabs-btn.active,
@@ -111,6 +112,16 @@
 .announcement-image,
 .news-image {
     width: 100%;
+    height: 25vh;
+    overflow: hidden;
+}
+
+.announcement-image a, .news-image a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .announcement-image img,
@@ -378,11 +389,22 @@
     .announcement-news .ajax__tab_header {
         height: 45px;
     }
+
+    .announcement-image,
+    .news-image {
+        height: 20vh;
+    }
+
 }
 
 @media (max-width: 1200px) {
     .announcement-news {
         gap: 20px;
+    }
+
+    .announcement-image,
+    .news-image {
+        height: 17.5vh;
     }
 }
 
@@ -401,6 +423,11 @@
         gap: 15px;
         padding: 12px;
     }
+
+    .announcement-image,
+    .news-image {
+        height: 15vh;
+    }
 }
 
 @media (max-width: 900px) {
@@ -413,7 +440,7 @@
     }
 
     .announcement-news .ajax__tab_header {
-        padding: 0 10px;
+        padding: 0 5px;
     }
 
     /* .announcement-tabs-btn,
@@ -474,11 +501,6 @@
         align-items: flex-start;
     }
 
-    .announcement-gymn-item,
-    .news-gymn-item {
-        flex-direction: row;
-    }
-
     .announcement-gymn,
     .announcement-poll,
     .news-gymn,
@@ -491,6 +513,11 @@
     .news-info {
         padding: 0 3px 3px;
     }
+
+    .announcement-image,
+    .news-image {
+        height: 25vh;
+    }
 }
 
 @media (max-width: 600px) {
@@ -499,11 +526,20 @@
         height: 40px;
     }
 
+    .announcement-news .ajax__tab_header>span .ajax__tab_tab {
+        padding: 0 5px;
+    }
+
     .announcement-gymn,
     .announcement-poll,
     .news-gymn,
     .news-rss {
         grid-template-columns: auto;
+    }
+
+    .announcement-image,
+    .news-image {
+        height: 35vh;
     }
 
     .announcement-gymn-archive-link,
@@ -518,15 +554,14 @@
 }
 
 @media (max-width: 480px) {
-
-    .announcement-gymn-item,
-    .news-gymn-item {
-        flex-direction: column;
+    .announcement-news .ajax__tab_header {
+        padding: 0px;
+        font-size: 10px;
     }
 
-    .announcement-news .ajax__tab_header {
-        padding: 0 2px;
-        font-size: 10px;
+    .announcement-image,
+    .news-image {
+        height: 25vh;
     }
 
     /* .announcement-tabs-btn, .news-tabs-btn {
@@ -534,7 +569,8 @@
     } */
 
     .announcement-news .ajax__tab_header>span .ajax__tab_tab {
-        padding: 0 1px;
+        padding: 0 3px;
     }
+
 
 }

@@ -1,0 +1,162 @@
+.MapYear,
+.MapMonth span {
+    display: flex;
+    color: #fff;
+    height: 2rem;
+    gap: 10px;
+}
+
+.MapYear,
+.MapMonth {
+    margin-bottom: 20px;
+    overflow-x: inherit;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #005B14 46.1%, #80D0C7 100%);
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+    border-radius: 30px;
+}
+
+.MapYear span,
+.MapMonth b,
+.MapMonth a {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.MapYear span.sel,
+.MapMonth b {
+    cursor: default;
+    background: #00861D;
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+.MapMonth a {
+    color: #fff;
+}
+
+.MapMonth a:hover,
+.MapYear span:hover {
+    background: #00861D;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 30px;
+}
+
+.archive-info .MapBody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.archive-info-item,
+.photo-gallery-block-item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: clamp(270px, 50vw, 340px);
+    border-radius: 43px;
+    margin: clamp(5px, 1vw, 15px);
+    padding: clamp(7px, 2vw, 20px);
+    flex: 1 0 340px;
+    transition: all 0.3s ease-in-out;
+}
+
+.archive-info-item:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    z-index: 4;
+    overflow-x: visible;
+    background: #f3f3f3;
+    transition: all 0.3s ease-in-out;
+}
+
+.archive-info-img {
+    position: relative;
+    display: flex;
+}
+
+.archive-info-img .archive-info-link {
+    line-height: 0;
+}
+
+.archive-info-link {
+    width: 100%;
+}
+
+.archive-info-item h3,
+.archive-info-text{
+    text-align: left;
+    display: flex;
+}
+
+.archive-info-img img {
+    width: 100%;
+    border-radius: 33px;
+}
+
+.archive-info-img .date {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(40px, 10vw, 55px);
+    height: clamp(40px, 10vw, 55px);
+    background: #00861d7e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.content-box .content-link-item {
+    border: 2px solid #ddd;
+    display: block;
+    padding: 7px;
+    border-top: 0;
+}
+
+.content-box .content-link-item:hover {
+    color: #005B14;
+    background: #005b1423;
+    transition: all 0.1s ease-in-out;
+}
+
+.content-box .content-link-item span {
+    font-weight: 700;
+    color: #fff;
+    margin: 0 2px ;
+    padding: .2em .6em .3em;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 5px;
+    font-size: 75%;
+}
+
+.content-box .content-link-item:first-child {
+    border-top: 2px solid #ddd;
+}
+
+.content-box .content-link-title {
+    margin: 0;
+}
+
+.content-box .content-link-title img {
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.content-box .content-link-file {
+    background: #005B14;
+}
+
+.content-box .content-link-size {
+    background: #00AF26;
+}
