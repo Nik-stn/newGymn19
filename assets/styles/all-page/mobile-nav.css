@@ -58,6 +58,11 @@
         margin-bottom: 13px;
     }
 
+    .header-nav-mobile .level_0>li.active a.active, .header-nav-mobile .level_1>li.active a {
+        color: #00AF26;
+        font-weight: 700;
+    }
+
     .mobile-chevron {
         margin-right: 15px;
     }
