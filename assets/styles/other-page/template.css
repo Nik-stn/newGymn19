@@ -1,6 +1,6 @@
 .main-grid {
     display: grid;
-    grid-template-columns: 0.8fr 0.2fr;
+    grid-template-columns: 1.6fr 0.4fr;
     gap: 30px;
     margin: 35px 50px;
 }
@@ -200,6 +200,7 @@
 .aside .level_0 a {
     display: block;
     padding: 4px 9px;
+    font-weight: 700;
 }
 
 .aside .level_1 a {
@@ -218,6 +219,7 @@
 .aside a:hover {
     transition: all 0.3s ease 0s;
     cursor: pointer;
+    color: #2E3332;
 }
 
 .aside a:hover::before {
@@ -290,7 +292,6 @@
 
 @media (max-width: 1024px) {
     .main-grid {
-        grid-template-columns: 0.75fr 0.25fr;
         gap: 10px;
         margin: 10px 15px;
     }
