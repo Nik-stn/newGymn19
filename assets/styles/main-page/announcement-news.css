@@ -1,5 +1,5 @@
 .announcement-news {
-    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .announcement,
@@ -104,7 +104,6 @@
 .news-rss-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
     border: 1px solid #0000001A;
     box-shadow: 1px 3px 4px 0px #0000001A;
 }
@@ -148,7 +147,7 @@
 .news-date,
 .news-rss-date,
 .news-rss-title {
-    margin-bottom: 0.5em;
+    margin: 0.5em 0;
 }
 
 .announcement-date img,
