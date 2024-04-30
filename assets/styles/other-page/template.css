@@ -11,93 +11,105 @@
     height: fit-content;
 }
 
-.article h1, .article h2, .article h3 {
+.article h1,
+.article h2,
+.article h3 {
     font-size: revert;
     margin: revert;
 }
 
 .breadcrumb {
     display: inline-block;
-	overflow: hidden;
-	border-radius: 5px;
+    overflow: hidden;
+    border-radius: 5px;
     margin-bottom: 25px;
 }
 
 .breadcrumb li {
-	display: block;
-	float: left;
-	color: white;
+    display: block;
+    float: left;
+    color: white;
     font-size: clamp(8px, 1vw, 12px);
-	background: #005B14;
-	padding: 0 10px 0 30px;
-	position: relative;
+    background: #005B14;
+    padding: 0 10px 0 30px;
+    position: relative;
+    margin-bottom: 5px;
 }
 
 .breadcrumb li a {
     display: flex;
     align-items: center;
-    height: 30px;  
+    height: 30px;
 }
 
 /*since the first link does not have a triangle before it we can reduce the left padding to make it look consistent with other links*/
 .breadcrumb li:first-child {
-	padding-left: 20px;
-	border-radius: 5px 0 0 5px; /*to match with the parent's radius*/
+    padding-left: 20px;
+    border-radius: 5px 0 0 5px;
+    /*to match with the parent's radius*/
 }
+
 .breadcrumb li:first-child:before {
-	left: 14px;
+    left: 14px;
 }
+
 .breadcrumb li:last-child {
-	border-radius: 0 5px 5px 0; /*this was to prevent glitches on hover*/
-	padding-right: 20px;
+    border-radius: 0 5px 5px 0;
+    /*this was to prevent glitches on hover*/
+    padding-right: 20px;
 }
 
 /*hover/active styles*/
-.breadcrumb li:last-child, .breadcrumb li:hover{
-	background: #00AF26;
+.breadcrumb li:last-child,
+.breadcrumb li:hover {
+    background: #00AF26;
 }
-.breadcrumb li:last-child:after, .breadcrumb li:hover:after {
-	background: #00AF26;
+
+.breadcrumb li:last-child:after,
+.breadcrumb li:hover:after {
+    background: #00AF26;
 }
 
 
 /*adding the arrows for the breadcrumbs using rotated pseudo elements*/
 .breadcrumb li:after {
-	content: '';
-	position: absolute;
-	top: 0; 
-	right: -15px; /*half of square's length*/
-	/*same dimension as the line-height of .breadcrumb a */
-	width: 30px; 
-	height: 30px;
-	/*as you see the rotated square takes a larger height. which makes it tough to position it properly. So we are going to scale it down so that the diagonals become equal to the line-height of the link. We scale it to 70.7% because if square's: 
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -15px;
+    /*half of square's length*/
+    /*same dimension as the line-height of .breadcrumb a */
+    width: 30px;
+    height: 30px;
+    /*as you see the rotated square takes a larger height. which makes it tough to position it properly. So we are going to scale it down so that the diagonals become equal to the line-height of the link. We scale it to 70.7% because if square's: 
 	length = 1; diagonal = (1^2 + 1^2)^0.5 = 1.414 (pythagoras theorem)
 	if diagonal required = 1; length = 1/1.414 = 0.707*/
-	transform: scale(0.707) rotate(45deg);
-	/*we need to prevent the arrows from getting buried under the next link*/
-	z-index: 1;
-	/*background same as links but the gradient will be rotated to compensate with the transform applied*/
-	background: #005B14;
+    transform: scale(0.707) rotate(45deg);
+    /*we need to prevent the arrows from getting buried under the next link*/
+    z-index: 1;
+    /*background same as links but the gradient will be rotated to compensate with the transform applied*/
+    background: #005B14;
 
-	/*stylish arrow design using box shadow*/
-	box-shadow: 
-		2px -2px 0 2px rgb(255, 255, 255), 
-		3px -3px 0 2px rgb(255, 255, 255);
-	/*
+    /*stylish arrow design using box shadow*/
+    box-shadow:
+        2px -2px 0 2px rgb(255, 255, 255),
+        3px -3px 0 2px rgb(255, 255, 255);
+    /*
 		5px - for rounded arrows and 
 		50px - to prevent hover glitches on the border created using shadows*/
-	border-radius: 0 5px 0 50px;
+    border-radius: 0 5px 0 50px;
 }
+
 /*we dont need an arrow after the last link*/
 .breadcrumb li:last-child:after {
-	content: none;
+    content: none;
 }
 
 .article .article-title {
     margin-left: clamp(5px, 2vw, 64px);
 }
 
-.article-title + hr {
+.article-title+hr {
     border: 1px solid #005B4B;
     margin: 20px 0;
 }
@@ -106,7 +118,18 @@
     margin: revert;
 }
 
-.content-box, .article {
+.content-box .post ul {
+    list-style-type: initial;
+}
+
+.content-box .post ul,
+.content-box .post ol {
+    padding-left: 2em;
+    margin: 0.5em 0 1em;
+}
+
+.content-box,
+.article {
     overflow-x: auto;
 }
 
@@ -145,7 +168,7 @@
     border-radius: 5px;
 }
 
-.share-buttons .ya-share2__list.ya-share2__list_direction_horizontal > .ya-share2__item {
+.share-buttons .ya-share2__list.ya-share2__list_direction_horizontal>.ya-share2__item {
     margin-right: 6px;
 }
 
@@ -174,11 +197,13 @@
     display: none;
 }
 
-.aside .level_0 li.active ul, .aside .level_0 li.parent_active ul {
+.aside .level_0 li.active ul,
+.aside .level_0 li.parent_active ul {
     display: block;
 }
 
-.aside .level_1, .aside .level_2 {
+.aside .level_1,
+.aside .level_2 {
     border-top: 2px solid #2E3332;
 }
 
@@ -189,11 +214,13 @@
 .aside .level_2 li {
     background: #00AF26;
 }
+
 .aside li.active {
     background: #00DE31;
 }
 
-.aside .level_1>li:last-child, .aside .level_2>li:last-child {
+.aside .level_1>li:last-child,
+.aside .level_2>li:last-child {
     border: 0;
 }
 
@@ -262,7 +289,7 @@
         margin-bottom: 18px;
     }
 
-    .article-title + hr {
+    .article-title+hr {
         margin: 15px 0;
     }
 }
@@ -281,7 +308,7 @@
         margin-bottom: 15px;
     }
 
-    .article-title + hr {
+    .article-title+hr {
         margin: 10px 0;
     }
 
@@ -304,7 +331,7 @@
         margin-bottom: 10px;
     }
 
-    .article-title + hr {
+    .article-title+hr {
         margin: 5px 0;
     }
 
@@ -317,8 +344,8 @@
     }
 
     .breadcrumb li:after {
-        right: -12px; 
-        width: 24px; 
+        right: -12px;
+        width: 24px;
         height: 24px;
     }
 
@@ -343,10 +370,6 @@
     .breadcrumb {
         margin-bottom: 5px;
     }
-
-    .breadcrumb li {
-        margin-bottom: 5px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -355,8 +378,8 @@
     }
 
     .breadcrumb li:after {
-        right: -10px; 
-        width: 20px; 
+        right: -10px;
+        width: 20px;
         height: 20px;
     }
 

@@ -237,6 +237,11 @@
     padding: 0 1em;
 }
 
+.entry_spoiler.excerpt .excerpt_preview {
+    width: 100%;
+    max-width: 200px;
+}
+
 .excerpt_content h4.predmet {
     margin-bottom: 5px;
 }
@@ -271,8 +276,7 @@ ul.no-list .name {
 
 .excerpt_preview img {
     min-width: 0;
-    max-width: 200px;
-    height: 100%;
+    width: 100%;
     display: block;
     border-radius: 43px;
 }
