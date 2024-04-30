@@ -147,6 +147,10 @@
     z-index: 1;
 }
 
+.header-nav-pc .level_0 li.active.parent>a {
+    background: linear-gradient(180deg, #00AF26 0%, #005B14 100%);
+}
+
 .header-nav-pc .parent>a:hover,
 .header-nav-pc .parent>span:hover {
     transition: all 0.3s ease 0s;
@@ -201,6 +205,10 @@
     transition: all .3s linear;
 }
 
+.header-nav-pc .level_1>li.active {
+    background: #00AF26;
+}
+
 .header-nav-pc .level_1>li>a {
     display: block;
     text-align: left;
@@ -208,7 +216,7 @@
     color: #2E3332;
 }
 
-.header-nav-pc .level_1>li:hover>a {
+.header-nav-pc .level_1>li:hover>a, .header-nav-pc .level_1>li.active>a {
     color: #fff;
 }
 
