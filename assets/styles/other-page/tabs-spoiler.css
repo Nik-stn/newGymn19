@@ -276,9 +276,11 @@ ul.no-list .name {
 
 .excerpt_preview img {
     min-width: 0;
-    width: 100%;
     display: block;
     border-radius: 43px;
+    min-width: 0;
+    max-width: 200px;
+    width: 100%;
 }
 
 .excerpt,
@@ -351,4 +353,24 @@ ul.no-list .name {
     height: 1.5em;
     margin-right: 0.5em;
     border-radius: 1.5em;
+}
+
+@media (max-width: 480px) {
+    .excerpt_preview img {
+        max-width: 100px;
+        min-width: 80px;
+    }
+
+    .entry_spoiler.excerpt .excerpt_preview {
+        max-width: 100px;
+        min-width: 80px;
+    }
+
+    .entry_spoiler.excerpt .excerpt_content {
+        margin-top: 0;
+    }
+
+    .entry_spoiler.excerpt .excerpt_content h2 {
+        margin: 0;
+    }
 }
