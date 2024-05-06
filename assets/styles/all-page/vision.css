@@ -65,7 +65,7 @@
     color: #000;
 }
 
-.buttonColorSiteWhite, .active.buttonColorSiteWhite, .header-mobile .level_0.buttonColorSiteWhite, .entry_spoiler.excerpt .show-hide.buttonColorSiteWhite, .poll-answer-btn.buttonColorSiteWhite, .poll-archive-btn.buttonColorSiteWhite {
+.buttonColorSiteWhite, .vision-alt .parent>a.buttonColorSiteWhite, .announcement-news .ajax__tab_header.buttonColorSiteWhite, .announcement-news .ajax__tab_header>span.ajax__tab_active .ajax__tab_tab.buttonColorSiteWhite, .active.buttonColorSiteWhite, .header-mobile .level_0.buttonColorSiteWhite, .entry_spoiler.excerpt .show-hide.buttonColorSiteWhite, .poll-answer-btn.buttonColorSiteWhite, .poll-archive-btn.buttonColorSiteWhite {
     background: #ebebeb;
 }
 
