@@ -11,6 +11,62 @@
 </head>
 <body>
     <div class="site-content">
+        <section class="section vision" style="display: none;">
+            <div class="container">
+                <div class="vision-flex">
+                    <div class="vision-item">
+                        <div class="vision-block font-size">
+                            <div>Размер шрифта</div>
+                            <div class="vision-settings">
+                                <a href="#" class="item-settings reduceFont" id="reduceFont" title="Уменьшить">A-</a>
+                                <a href="#" class="item-settings increaseFont" id="increaseFont"
+                                    title="Увеличить">A+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vision-item">
+                        <div class="vision-block letter-spacing">
+                            <div>Межбуквенное растояние</div>
+                            <div class="vision-settings">
+                                <a href="#" data-letter-spacing="0" class="item-settings changeLetterSpacing" id=""
+                                    title="Стандартное">Стандартное</a>
+                                <a href="#" data-letter-spacing="1" class="item-settings changeLetterSpacing" id=""
+                                    title="Среднее">Среднее</a>
+                                <a href="#" data-letter-spacing="2" class="item-settings changeLetterSpacing" id=""
+                                    title="Большое">Большое</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vision-item">
+                        <div class="vision-block color-site">
+                            <div>Цвет сайта</div>
+                            <div class="vision-settings">
+                                <a href="#" class="item-settings colorSite" id="colorSiteBlack"
+                                    title="Чёрным по белому">A</a>
+                                <a href="#" class="item-settings colorSite" id="colorSiteWhite"
+                                    title="Белым по чёрному">A</a>
+                                <a href="#" class="item-settings colorSite" id="colorSiteBlue"
+                                    title="Тёмно-синим по голубому">A</a>
+                                <a href="#" class="item-settings colorSite" id="colorSiteBeige"
+                                    title="Коричневым по бежевому">A</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vision-item">
+                        <div class="vision-block images">
+                            <div>Изоображения</div>
+                            <div class="vision-settings">
+                                <a href="#" class="item-settings imagesNo" id="imagesNo" title="Выключены">Выкл</a>
+                                <a href="#" class="item-settings imagesYes" id="imagesYes" title="Включены">Цвет</a>
+                                <a href="#" class="item-settings imagesBlackWhite" id="imagesBlackWhite"
+                                    title="Чёрно-белые">ч/б</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <header class="header" id="top">
             <div class="container">
                 <div class="header-top">
@@ -19,8 +75,12 @@
                         <span>Карта сайта</span></a>
                     </div>
                     <div class="header-top-item" >
-                        <a class="header-vision" href="#"><img src="assets/images/header/vision.svg" alt="Иконка версии для слабовидящих">
+                        <a class="header-vision" href="#" id="normal-eye"><img src="assets/images/header/normal-eye.svg" alt="Иконка версии для слабовидящих">
                         <span>Версия для слабовидящих</span></a>
+                        <a class="header-vision" style="display: none;" href="#" id="cross-eye"><img src="assets/images/header/cross-eye.svg" alt="Иконка Обычная версия">
+                        <span>Обычная версия</span></a>
+                        <a class="header-vision" style="display: none;" href="#" id="cross-eye-white"><img src="assets/images/header/cross-eye-white.svg" alt="Иконка Обычная версия (белая)">
+                        <span>Обычная версия</span></a>
                     </div>
                     <div class="header-top-item" >
                         <a class="header-language" href="#"><img src="assets/images/header/lang-ru.jpg" alt="Рус"></a>
@@ -36,12 +96,12 @@
                         <h1>"Гимназия №19 г. Минска"</h1>
                     </div>
                     <div class="header-buttons-box">
-                        <a href="#" class="header-button">Контакты</a>
-                        <a href="#" class="header-button">Сервисы</a>
-                        <a href="#" class="header-button">Защита персональных данных</a>
+                        <a href="#" class="header-button vision-alt">Контакты</a>
+                        <a href="#" class="header-button vision-alt">Сервисы</a>
+                        <a href="#" class="header-button vision-alt">Защита персональных данных</a>
                     </div>
                 </div>
-                <div class="header-nav">
+                <div class="header-nav vision-alt">
                     <div class="header-nav-mobile">
                         <input type="radio" name="mobile-menu" class="mobile-menu-checkbox">
                         <img src="assets/images/header/menu-burger-horizontal.svg" alt="Иконка меню сайта">
@@ -833,6 +893,7 @@
     <script defer src="assets/scripts/announcement-news.js"></script>
     <script defer src="assets/scripts/map.js"></script>
     <script defer src="assets/scripts/main.js"></script>
+    <script defer src="assets/scripts/vision.js"></script>
     <script defer src="assets/scripts/owl.carousel.js"></script>
 </body>
 </html>
