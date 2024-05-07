@@ -1,5 +1,5 @@
 const siteFont = document.querySelectorAll(".site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6");
-const siteContent = document.querySelectorAll(".site-content, .site-content a, h1, h2, h3, h4, h5 , h6, figcaption, .header-top, .header-nav, .footer, .announcement-news .ajax__tab_header>span .ajax__tab_tab, .announcement-news .ajax__tab_header, .visiting-card-gymn a, .announcement-tabs-item, .news-tabs-item");
+const siteContent = document.querySelectorAll(".site-content, .site-content a, h1, h2, h3, h4, h5 , h6, figcaption, .header-top, .header-nav, .footer, .edu_by>div, .announcement-news .ajax__tab_header>span.ajax__tab_active .ajax__tab_tab, .ajax__tab_header, .announcement, .news, .visiting-card-gymn a, .announcement-tabs-item, .news-tabs-item");
 const siteBorder = document.querySelectorAll("div");
 
 const img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img,  .gymn-map");
