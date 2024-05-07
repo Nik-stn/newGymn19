@@ -1,11 +1,17 @@
-const img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img, .sch-map,  .slider-icon, .banners-icon, .heade.header-pc .level_0 .active>r-mobile .parent");
-const siteContent = document.querySelectorAll(".site-content, .popular-item, .news-box, .announcement-poll-item, .announcement-sch-item");
+const siteFont = document.querySelectorAll(".site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6");
+const siteContent = document.querySelectorAll("a, h1, h2, h3, h4, h5 , h6, figcaption, .owl-nav span, .header-nav, .footer, .announcement-news .ajax__tab_header>span .ajax__tab_tab, .announcement-news .ajax__tab_header, .visiting-card-gymn a");
+const siteBorder = document.querySelectorAll("div");
+
+
+
 const buttons = document.querySelectorAll(".vision-btn, .vision-alt .header-nav-pc .parent>a, .announcement-news .ajax__tab_header, .announcement-news .ajax__tab_header>span.ajax__tab_active .ajax__tab_tab, .header-mobile .level_0, .show-hide");
+const img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img, .sch-map,  .slider-icon, .banners-icon, .heade.header-pc .level_0 .active>r-mobile .parent");
 const checkbox = document.querySelectorAll(".checkbox-line span, .scrooll-to-top");
 const noBorder = document.querySelectorAll('.footer-flex, .news-sch-item, .announcement-poll-item, .announcement-sch-item, .news-rss-content, .poll-item, .entry_spoiler.excerpt');
 const links = document.querySelectorAll('.vision-alt .header-nav-pc .parent>a, .vision-alt, .show-hide, .header-pc .parent>span, .announcement-tabs-btn,  .news-rss-link, .news-tabs-btn, .news-sch-content, .announcement-sch-content, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .parent>a, .header-mobile .level_1>li>a, .popular-item a, .breadcrumbs-link, .link-header-bar, .news-sch-archive-link, .announcement-poll-archive-link, .poll-link-archive, .announcement-sch-archive-link, .poll-answer-btn, .aside-link, .aside-sub-link, .poll-archive-btn, .breadcrumbs-item>span, .content-box .content-item, .panel-tab, .announcement-sch-button, .news-sch-button');
 const mostSelectors = document.querySelectorAll('.popular-item, .btn-header-bar, .btn-header-bar-blue, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .announcement-tabs-btn, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text, .poll-link-archive-text, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .level_0, .header-mobile .parent>a, .header-mobile .level_1>li>a, .checkbox-line span, .scrooll-to-top');
 const noHover = document.querySelectorAll('.header-pc .parent>a, .header-pc .parent>span, .announcement-sch-button, .news-sch-button');
+
 
 const crossEyeSvg = document.getElementById("cross-eye");
 const normalEyeSvg = document.getElementById("normal-eye");
@@ -18,7 +24,7 @@ const letterSpacing = document.querySelectorAll(".changeLetterSpacing");
 
 function updateStyles() {
     crossEyeSvg.style.display = "inline-block";
-    vision.style.display = "block";
+    vision.style.display = "inline-block";
     normalEyeSvg.style.display = "none";
     siteBackground.style.background = "0";
     crossEyeWhiteSvg.style.display = "none";
@@ -31,7 +37,12 @@ function applyWhiteStyles() {
         item.classList.add('linkColorSiteWhite');
         item.classList.remove("linkColorSiteBlue", "linkColorSiteBlack", "linkColorSiteBeige");
     });
-    buttons.forEach(item => {
+    siteBorder.forEach(item => {
+        item.style.borderColor = '#2E3332';
+    });
+    siteContent.forEach(item => {
+        item.style.background = '#fff';
+        item.style.color = '#2E3332';
         item.classList.add('buttonColorSiteWhite');
         item.classList.remove("buttonColorSiteBlue", "buttonColorSiteBlack", "buttonColorSiteBeige");
     });
@@ -55,7 +66,7 @@ function applyBlueStyles() {
         item.classList.add('linkColorSiteBlue');
         item.classList.remove("linkColorSiteWhite", "linkColorSiteBlack", "linkColorSiteBeige");
     });
-    buttons.forEach(item => {
+    siteContent.forEach(item => {
         item.classList.add('buttonColorSiteBlue');
         item.classList.remove("buttonColorSiteWhite", "buttonColorSiteBlack", "buttonColorSiteBeige");
     });
@@ -81,7 +92,7 @@ function applyBlackStyles() {
         item.classList.add('linkColorSiteBlack');
         item.classList.remove("linkColorSiteWhite", "linkColorSiteBlue", "linkColorSiteBeige");
     });
-    buttons.forEach(item => {
+    siteContent.forEach(item => {
         item.classList.add('buttonColorSiteBlack');
         item.classList.remove("buttonColorSiteWhite", "buttonColorSiteBlue", "buttonColorSiteBeige");
     });
@@ -105,7 +116,7 @@ function applyBeigeStyles() {
         item.classList.add('linkColorSiteBeige');
         item.classList.remove("linkColorSiteBlack", "linkColorSiteBlue", "linkColorSiteWhite");
     });
-    buttons.forEach(item => {
+    siteContent.forEach(item => {
         item.classList.add('buttonColorSiteBeige');
         item.classList.remove("buttonColorSiteBlack", "buttonColorSiteBlue", "buttonColorSiteWhite");
     });
@@ -124,15 +135,16 @@ function applyBeigeStyles() {
 
 function deleteVisionStyles() {
     imgYes.dispatchEvent(new Event("click"));
+    mostSelectors.forEach(item => item.removeAttribute("style"));
+    siteFont.forEach(item => item.removeAttribute("style"));
+    siteContent.forEach(item => item.removeAttribute("style"));
+    siteBody.removeAttribute("class");
     crossEyeSvg.style.display = "none";
     crossEyeWhiteSvg.style.display = "none";
     vision.style.display = "none";
     normalEyeSvg.style.display = "inline-block";
-    mostSelectors.forEach(item => item.removeAttribute("style"));
-    siteContent.forEach(item => item.removeAttribute("style"));
-    siteBody.removeAttribute("class");
     links.forEach(item => item.classList.remove("linkColorSiteBlue", "linkColorSiteWhite", "linkColorSiteBlack", "linkColorSiteBeige"));
-    buttons.forEach(item => item.classList.remove('buttonColorSiteBlue', "buttonColorSiteWhite", "buttonColorSiteBlack", "buttonColorSiteBeige"));
+    siteContent.forEach(item => item.classList.remove('buttonColorSiteBlue', "buttonColorSiteWhite", "buttonColorSiteBlack", "buttonColorSiteBeige"));
     checkbox.forEach(item => item.classList.remove('checkboxColorSiteBlue', "checkboxColorSiteWhite", "checkboxColorSiteBlack", "checkboxColorSiteBeige"));
     noBorder.forEach(item => item.classList.remove('footerNoBorder', 'newsNoBorder'));
     localStorage.clear();
@@ -183,7 +195,7 @@ function colorSiteClick(event) {
 
 function updateFontSizes(changeAmount) {
     let fz;
-    siteContent.forEach(item => {
+    siteFont.forEach(item => {
         fz = parseFloat(window.getComputedStyle(item).fontSize);
         fz += changeAmount;
         if (fz >= 12 && fz <= 24) item.style.fontSize = fz + "px";
@@ -219,7 +231,7 @@ function imagesBlackWhiteClick(event) {
     event.preventDefault();
     const imgBlackWhite = img.forEach(item => {
         item.classList.add("imagesBlackWhite");
-        item.style.display = "block";
+        item.style.display = "inline-block";
     });
     localStorage.setItem('applyImgBlackWhiteStyles', imgBlackWhite);
     localStorage.removeItem('applyImgColor');
@@ -228,13 +240,13 @@ function imagesBlackWhiteClick(event) {
 
 function spacing() {
     const data = this.getAttribute("data-letter-spacing");
-    siteContent.forEach(item => item.style.letterSpacing = data + 'px');
+    siteFont.forEach(item => item.style.letterSpacing = data + 'px');
     localStorage.setItem('applySpaceStyles', data);
 }
 
 function changeImageFontSpacing() {
-    siteContent.forEach(item => item.style.letterSpacing = getSpacing + 'px');
-    siteContent.forEach(item => item.style.fontSize = getFontSize + "px");
+    siteFont.forEach(item => item.style.letterSpacing = getSpacing + 'px');
+    siteFont.forEach(item => item.style.fontSize = getFontSize + "px");
     if (getImgColor !== null) {
         img.forEach(item => {
             item.classList.remove("imagesBlackWhite");
@@ -243,12 +255,12 @@ function changeImageFontSpacing() {
     } else if (getImgBlackWhite !== null) {
         img.forEach(item => {
             item.classList.add("imagesBlackWhite");
-            item.style.display = "block";
+            item.style.display = "inline-block";
         });
     } else if (getImgDelete !== null) {
         img.forEach(item => {
             item.classList.remove("imagesBlackWhite");
-            item.style.display = "none";
+            item.style.display = "inline-none";
         });
     }
 }

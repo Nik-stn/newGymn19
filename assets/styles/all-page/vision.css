@@ -42,31 +42,31 @@
 }
 
 .colorSiteBlack, #colorSiteBlack {
-    background: #000;
-    color: #fff ;
+    background: #000 !important;
+    color: #fff !important;
 }
 
 .colorSiteWhite, #colorSiteWhite {
-    background: #fff;
-    color: #000 ;
+    background: #fff !important;
+    color: #2E3332 !important;
 }
 
 .colorSiteBlue, #colorSiteBlue {
-    background: #9dd1ff;
-    color: #00f;
+    background: #9dd1ff !important;
+    color: #00f !important;
 }
 
 .colorSiteBeige, #colorSiteBeige {
-    background: #f7f3d6;
-    color: brown;
+    background: #f7f3d6 !important;
+    color: brown !important;
 }
 
-.linkColorSiteWhite, .active.linkColorSiteWhite, li a.linkColorSiteWhite, .header-mobile .parent>a.linkColorSiteWhite, .header-nav-pc .parent>.linkColorSiteWhite, .about-text-item a.linkColorSiteWhite, .announcement-tab-btn.buttonColorSiteWhite, .footer-copyright a.linkColorSiteWhite, .entry_spoiler.excerpt .show-hide.linkColorSiteWhite, .header-pc .level_0 .active>span.linkColorSiteWhite, .poll-answer-btn.linkColorSiteWhite, .poll-archive-btn.linkColorSiteWhite, .breadcrumbs-item>span.linkColorSiteWhite, .content-box .content-item.linkColorSiteWhite {
+/* .linkColorSiteWhite, .active.linkColorSiteWhite, li a.linkColorSiteWhite, .header-mobile .parent>a.linkColorSiteWhite, .header-nav-pc .parent>.linkColorSiteWhite, .about-text-item a.linkColorSiteWhite, .announcement-tab-btn.buttonColorSiteWhite, .footer-copyright a.linkColorSiteWhite, .entry_spoiler.excerpt .show-hide.linkColorSiteWhite, .header-pc .level_0 .active>span.linkColorSiteWhite, .poll-answer-btn.linkColorSiteWhite, .poll-archive-btn.linkColorSiteWhite, .breadcrumbs-item>span.linkColorSiteWhite, .content-box .content-item.linkColorSiteWhite {
     color: #000;
 }
 
-.buttonColorSiteWhite, .vision-alt .parent>a.buttonColorSiteWhite, .announcement-news .ajax__tab_header.buttonColorSiteWhite, .announcement-news .ajax__tab_header>span.ajax__tab_active .ajax__tab_tab.buttonColorSiteWhite, .active.buttonColorSiteWhite, .header-mobile .level_0.buttonColorSiteWhite, .entry_spoiler.excerpt .show-hide.buttonColorSiteWhite, .poll-answer-btn.buttonColorSiteWhite, .poll-archive-btn.buttonColorSiteWhite {
-    background: #ebebeb;
+.buttonColorSiteWhite, .header-nav-pc .parent>a.buttonColorSiteWhite{
+    background: #fff;
 }
 
 .header-pc .level_0 .active>span.linkColorSiteWhite, .content-box .content-item.linkColorSiteWhite {
@@ -141,5 +141,5 @@ img.imagesBlackWhite, .sch-map.imagesBlackWhite, #ya-site-form0 input.ya-site-fo
 .footer-flex.imagesBlackWhite {
     border: 0;
     
-}
+} */
 
