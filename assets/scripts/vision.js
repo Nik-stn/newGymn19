@@ -1,17 +1,8 @@
 const siteFont = document.querySelectorAll(".site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6");
-const siteContent = document.querySelectorAll("a, h1, h2, h3, h4, h5 , h6, figcaption, .owl-nav span, .header-nav, .footer, .announcement-news .ajax__tab_header>span .ajax__tab_tab, .announcement-news .ajax__tab_header, .visiting-card-gymn a");
+const siteContent = document.querySelectorAll(".site-content, .site-content a, h1, h2, h3, h4, h5 , h6, figcaption, .header-top, .header-nav, .footer, .announcement-news .ajax__tab_header>span .ajax__tab_tab, .announcement-news .ajax__tab_header, .visiting-card-gymn a, .announcement-tabs-item, .news-tabs-item");
 const siteBorder = document.querySelectorAll("div");
 
-
-
-const buttons = document.querySelectorAll(".vision-btn, .vision-alt .header-nav-pc .parent>a, .announcement-news .ajax__tab_header, .announcement-news .ajax__tab_header>span.ajax__tab_active .ajax__tab_tab, .header-mobile .level_0, .show-hide");
-const img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img, .sch-map,  .slider-icon, .banners-icon, .heade.header-pc .level_0 .active>r-mobile .parent");
-const checkbox = document.querySelectorAll(".checkbox-line span, .scrooll-to-top");
-const noBorder = document.querySelectorAll('.footer-flex, .news-sch-item, .announcement-poll-item, .announcement-sch-item, .news-rss-content, .poll-item, .entry_spoiler.excerpt');
-const links = document.querySelectorAll('.vision-alt .header-nav-pc .parent>a, .vision-alt, .show-hide, .header-pc .parent>span, .announcement-tabs-btn,  .news-rss-link, .news-tabs-btn, .news-sch-content, .announcement-sch-content, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .parent>a, .header-mobile .level_1>li>a, .popular-item a, .breadcrumbs-link, .link-header-bar, .news-sch-archive-link, .announcement-poll-archive-link, .poll-link-archive, .announcement-sch-archive-link, .poll-answer-btn, .aside-link, .aside-sub-link, .poll-archive-btn, .breadcrumbs-item>span, .content-box .content-item, .panel-tab, .announcement-sch-button, .news-sch-button');
-const mostSelectors = document.querySelectorAll('.popular-item, .btn-header-bar, .btn-header-bar-blue, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .announcement-tabs-btn, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text, .poll-link-archive-text, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .level_0, .header-mobile .parent>a, .header-mobile .level_1>li>a, .checkbox-line span, .scrooll-to-top');
-const noHover = document.querySelectorAll('.header-pc .parent>a, .header-pc .parent>span, .announcement-sch-button, .news-sch-button');
-
+const img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img,  .gymn-map");
 
 const crossEyeSvg = document.getElementById("cross-eye");
 const normalEyeSvg = document.getElementById("normal-eye");
@@ -24,62 +15,31 @@ const letterSpacing = document.querySelectorAll(".changeLetterSpacing");
 
 function updateStyles() {
     crossEyeSvg.style.display = "inline-block";
-    vision.style.display = "inline-block";
+    vision.style.display = "block";
     normalEyeSvg.style.display = "none";
-    siteBackground.style.background = "0";
+    siteBackground.style.background = "#fff";
     crossEyeWhiteSvg.style.display = "none";
 }
 
 function applyWhiteStyles() {
     updateStyles();
-    siteBody.classList.add("colorSiteWhite");
-    links.forEach(item => {
-        item.classList.add('linkColorSiteWhite');
-        item.classList.remove("linkColorSiteBlue", "linkColorSiteBlack", "linkColorSiteBeige");
-    });
     siteBorder.forEach(item => {
         item.style.borderColor = '#2E3332';
     });
     siteContent.forEach(item => {
         item.style.background = '#fff';
         item.style.color = '#2E3332';
-        item.classList.add('buttonColorSiteWhite');
-        item.classList.remove("buttonColorSiteBlue", "buttonColorSiteBlack", "buttonColorSiteBeige");
-    });
-    checkbox.forEach(item => {
-        item.classList.add('checkboxColorSiteWhite');
-        item.classList.remove("checkboxColorSiteBlue", "checkboxColorSiteBlack", "checkboxColorSiteBeige");
-    });
-    noBorder.forEach(item => item.classList.add('footerNoBorder', 'newsNoBorder'));
-    noHover.forEach(item => {
-        item.style.zIndex = 'unset';
-        item.addEventListener('mouseover', function() {
-            this.removeClass('hover');
-        });
     });
 }
 
 function applyBlueStyles() {
     updateStyles();
-    siteBody.classList.add("colorSiteBlue");
-    links.forEach(item => {
-        item.classList.add('linkColorSiteBlue');
-        item.classList.remove("linkColorSiteWhite", "linkColorSiteBlack", "linkColorSiteBeige");
+    siteBorder.forEach(item => {
+        item.style.borderColor = '#00f';
     });
     siteContent.forEach(item => {
-        item.classList.add('buttonColorSiteBlue');
-        item.classList.remove("buttonColorSiteWhite", "buttonColorSiteBlack", "buttonColorSiteBeige");
-    });
-    checkbox.forEach(item => {
-        item.classList.add('checkboxColorSiteBlue');
-        item.classList.remove("checkboxColorSiteWhite", "checkboxColorSiteBlack", "checkboxColorSiteBeige");
-    });
-    noBorder.forEach(item => item.classList.add('footerNoBorder', 'newsNoBorder'));
-    noHover.forEach(item => {
-        item.style.zIndex = 'unset';
-        item.addEventListener('mouseover', function() {
-            this.removeClass('hover');
-        });
+        item.style.background = '#9dd1ff';
+        item.style.color = '#00f';
     });
 }
 
@@ -87,66 +47,37 @@ function applyBlackStyles() {
     updateStyles();
     crossEyeSvg.style.display = "none";
     crossEyeWhiteSvg.style.display = "inline-block";
-    siteBody.classList.add("colorSiteBlack");
-    links.forEach(item => {
-        item.classList.add('linkColorSiteBlack');
-        item.classList.remove("linkColorSiteWhite", "linkColorSiteBlue", "linkColorSiteBeige");
+    siteBorder.forEach(item => {
+        item.style.borderColor = '#fff';
     });
     siteContent.forEach(item => {
-        item.classList.add('buttonColorSiteBlack');
-        item.classList.remove("buttonColorSiteWhite", "buttonColorSiteBlue", "buttonColorSiteBeige");
-    });
-    checkbox.forEach(item => {
-        item.classList.add('checkboxColorSiteBlack');
-        item.classList.remove("checkboxColorSiteWhite", "checkboxColorSiteBlue", "checkboxColorSiteBeige");
-    });
-    noBorder.forEach(item => item.classList.add('footerNoBorder', 'newsNoBorder'));
-    noHover.forEach(item => {
-        item.style.zIndex = 'unset';
-        item.addEventListener('mouseover', function() {
-            this.removeClass('hover');
-        });
+        item.style.background = '#000';
+        item.style.color = '#fff';
     });
 }
 
 function applyBeigeStyles() {
     updateStyles();
-    siteBody.classList.add("colorSiteBeige");
-    links.forEach(item => {
-        item.classList.add('linkColorSiteBeige');
-        item.classList.remove("linkColorSiteBlack", "linkColorSiteBlue", "linkColorSiteWhite");
+    siteBorder.forEach(item => {
+        item.style.borderColor = 'brown';
     });
     siteContent.forEach(item => {
-        item.classList.add('buttonColorSiteBeige');
-        item.classList.remove("buttonColorSiteBlack", "buttonColorSiteBlue", "buttonColorSiteWhite");
-    });
-    checkbox.forEach(item => {
-        item.classList.add('checkboxColorSiteBeige');
-        item.classList.remove("checkboxColorSiteBlack", "checkboxColorSiteBlue", "checkboxColorSiteWhite");
-    });
-    noBorder.forEach(item => item.classList.add('footerNoBorder', 'newsNoBorder'));
-    noHover.forEach(item => {
-        item.style.zIndex = 'unset';
-        item.addEventListener('mouseover', function() {
-            this.removeClass('hover');
-        });
+        item.style.background = '#f7f3d6';
+        item.style.color = 'brown';
     });
 }
 
 function deleteVisionStyles() {
     imgYes.dispatchEvent(new Event("click"));
-    mostSelectors.forEach(item => item.removeAttribute("style"));
     siteFont.forEach(item => item.removeAttribute("style"));
     siteContent.forEach(item => item.removeAttribute("style"));
+    img.forEach(item => item.removeAttribute("style"));
+    siteBorder.forEach(item => item.removeAttribute("style"));
     siteBody.removeAttribute("class");
     crossEyeSvg.style.display = "none";
     crossEyeWhiteSvg.style.display = "none";
     vision.style.display = "none";
     normalEyeSvg.style.display = "inline-block";
-    links.forEach(item => item.classList.remove("linkColorSiteBlue", "linkColorSiteWhite", "linkColorSiteBlack", "linkColorSiteBeige"));
-    siteContent.forEach(item => item.classList.remove('buttonColorSiteBlue', "buttonColorSiteWhite", "buttonColorSiteBlack", "buttonColorSiteBeige"));
-    checkbox.forEach(item => item.classList.remove('checkboxColorSiteBlue', "checkboxColorSiteWhite", "checkboxColorSiteBlack", "checkboxColorSiteBeige"));
-    noBorder.forEach(item => item.classList.remove('footerNoBorder', 'newsNoBorder'));
     localStorage.clear();
 }
 
@@ -208,7 +139,7 @@ function updateFontSizes(changeAmount) {
 function imagesNoClick(event) {
     event.preventDefault();
     const imgDelete = img.forEach(item => {
-        item.classList.remove("imagesBlackWhite");
+        item.style.filter = 'grayscale(0%)';
         item.style.display = "none";
     });
     localStorage.setItem('applyImgDelete', imgDelete);
@@ -219,7 +150,7 @@ function imagesNoClick(event) {
 function imagesYesClick(event) {
     event.preventDefault();
     const imgColor = img.forEach(item => {
-        item.classList.remove("imagesBlackWhite");
+        item.style.filter = 'grayscale(0%)';
         item.style.display = "inline-block";
     });
     localStorage.setItem('applyImgColor', imgColor);
@@ -230,7 +161,7 @@ function imagesYesClick(event) {
 function imagesBlackWhiteClick(event) {
     event.preventDefault();
     const imgBlackWhite = img.forEach(item => {
-        item.classList.add("imagesBlackWhite");
+        item.style.filter = 'grayscale(100%)';
         item.style.display = "inline-block";
     });
     localStorage.setItem('applyImgBlackWhiteStyles', imgBlackWhite);
@@ -249,18 +180,18 @@ function changeImageFontSpacing() {
     siteFont.forEach(item => item.style.fontSize = getFontSize + "px");
     if (getImgColor !== null) {
         img.forEach(item => {
-            item.classList.remove("imagesBlackWhite");
-            item.style.display = "block";
+            item.style.filter = 'grayscale(0%)';
+            item.style.display = "inline-block";
         });
     } else if (getImgBlackWhite !== null) {
         img.forEach(item => {
-            item.classList.add("imagesBlackWhite");
+            item.style.filter = 'grayscale(100%)';
             item.style.display = "inline-block";
         });
     } else if (getImgDelete !== null) {
         img.forEach(item => {
-            item.classList.remove("imagesBlackWhite");
-            item.style.display = "inline-none";
+            item.style.filter = 'grayscale(0%)';
+            item.style.display = "none";
         });
     }
 }
