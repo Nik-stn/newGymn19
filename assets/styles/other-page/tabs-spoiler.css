@@ -168,6 +168,11 @@
     box-shadow: none;
 }
 
+.experpt_card {
+    display: flex;
+    gap: 20px;
+}
+
 .entry_spoiler.excerpt .excerpt_content {
     margin-top: 0.5em;
 }
@@ -239,7 +244,7 @@
 
 .entry_spoiler.excerpt .excerpt_preview {
     width: 100%;
-    max-width: 200px;
+    max-width: 150px;
 }
 
 .excerpt_content h4.predmet {
@@ -278,8 +283,8 @@ ul.no-list .name {
     min-width: 0;
     display: block;
     border-radius: 43px;
-    min-width: 0;
-    max-width: 200px;
+    height: auto;
+    max-width: 150px;
     width: 100%;
 }
 
