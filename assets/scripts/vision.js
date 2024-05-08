@@ -1,6 +1,7 @@
 const siteFont = document.querySelectorAll(".site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6");
 const siteContent = document.querySelectorAll(".site-content, .site-content a, h1, h2, h3, h4, h5 , h6, figcaption, .header-top, .header-nav, .footer, .edu_by>div, .ajax__tab_header, .announcement, .news, .visiting-card-gymn a, .announcement-tabs-item, .news-tabs-item, #__tab_Tabs_34171_ctl00, #__tab_Tabs_34171_ctl01, #__tab_Tabs_34171_ctl02, #__tab_Tabs_34171_ctl03, #__tab_Tabs_34171_ctl04, #__tab_Tabs_34231_ctl00, #__tab_Tabs_34231_ctl01, #__tab_Tabs_34231_ctl02, #__tab_Tabs_34231_ctl03, #__tab_Tabs_34231_ctl04");
 const siteBorder = document.querySelectorAll("div");
+const owlBtn = document.querySelectorAll('.owl-nav button span');
 
 const img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img,  .gymn-map");
 
@@ -30,6 +31,9 @@ function applyWhiteStyles() {
         item.style.background = '#fff';
         item.style.color = '#2E3332';
     });
+    owlBtn.forEach(item => {
+        item.style.color = '#2E3332';
+    });
 }
 
 function applyBlueStyles() {
@@ -39,6 +43,9 @@ function applyBlueStyles() {
     });
     siteContent.forEach(item => {
         item.style.background = '#9dd1ff';
+        item.style.color = '#00f';
+    });
+    owlBtn.forEach(item => {
         item.style.color = '#00f';
     });
 }
@@ -54,6 +61,9 @@ function applyBlackStyles() {
         item.style.background = '#000';
         item.style.color = '#fff';
     });
+    owlBtn.forEach(item => {
+        item.style.color = '#fff';
+    });
 }
 
 function applyBeigeStyles() {
@@ -65,6 +75,9 @@ function applyBeigeStyles() {
         item.style.background = '#f7f3d6';
         item.style.color = 'brown';
     });
+    owlBtn.forEach(item => {
+        item.style.color = 'brown';
+    });
 }
 
 function deleteVisionStyles() {
@@ -72,6 +85,7 @@ function deleteVisionStyles() {
     siteFont.forEach(item => item.removeAttribute("style"));
     siteContent.forEach(item => item.removeAttribute("style"));
     img.forEach(item => item.removeAttribute("style"));
+    owlBtn.forEach(item => item.removeAttribute("style"));
     siteBorder.forEach(item => item.style.removeProperty("border-color"));
     siteBody.removeAttribute("class");
     crossEyeSvg.style.display = "none";
