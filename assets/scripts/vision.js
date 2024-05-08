@@ -1,9 +1,9 @@
 const siteFont = document.querySelectorAll(".site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6");
-const siteContent = document.querySelectorAll(".site-content, .site-content a, h1, h2, h3, h4, h5 , h6, figcaption, .header-top, .header-nav, .footer, .edu_by>div, .ajax__tab_header, .announcement, .news, .visiting-card-gymn a, .announcement-tabs-item, .news-tabs-item, #__tab_Tabs_34171_ctl00, #__tab_Tabs_34171_ctl01, #__tab_Tabs_34171_ctl02, #__tab_Tabs_34171_ctl03, #__tab_Tabs_34171_ctl04, #__tab_Tabs_34231_ctl00, #__tab_Tabs_34231_ctl01, #__tab_Tabs_34231_ctl02, #__tab_Tabs_34231_ctl03, #__tab_Tabs_34231_ctl04");
-const siteBorder = document.querySelectorAll("div");
+const siteContent = document.querySelectorAll(".site-content, .site-content a, li, h1, h2, h3, h4, h5 , h6, figcaption, .header-top, .header-nav, .footer, .edu_by>div, .ajax__tab_header, .announcement, .news, .visiting-card-gymn a, .announcement-tabs-item, .news-tabs-item, #__tab_Tabs_34171_ctl00, #__tab_Tabs_34171_ctl01, #__tab_Tabs_34171_ctl02, #__tab_Tabs_34171_ctl03, #__tab_Tabs_34171_ctl04, #__tab_Tabs_34231_ctl00, #__tab_Tabs_34231_ctl01, #__tab_Tabs_34231_ctl02, #__tab_Tabs_34231_ctl03, #__tab_Tabs_34231_ctl04");
+const siteBorder = document.querySelectorAll("div, article, hr");
 const owlBtn = document.querySelectorAll('.owl-nav button span');
 
-const img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img,  .gymn-map");
+const img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img,  .gymn-map, .youtube, .ya-share2__list");
 
 const crossEyeSvg = document.getElementById("cross-eye");
 const normalEyeSvg = document.getElementById("normal-eye");
