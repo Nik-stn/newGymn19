@@ -20,6 +20,10 @@ function updateStyles() {
     normalEyeSvg.style.display = "none";
     siteBackground.style.background = "#fff";
     crossEyeWhiteSvg.style.display = "none";
+    siteContent.forEach(item => {
+        item.style.zIndex = 'unset';
+    });
+    document.querySelector('.header-nav').style.zIndex = '20'
 }
 
 function applyWhiteStyles() {
@@ -30,7 +34,6 @@ function applyWhiteStyles() {
     siteContent.forEach(item => {
         item.style.background = '#fff';
         item.style.color = '#2E3332';
-        item.style.zIndex = 'unset';
     });
     owlBtn.forEach(item => {
         item.style.color = '#2E3332';
@@ -45,7 +48,6 @@ function applyBlueStyles() {
     siteContent.forEach(item => {
         item.style.background = '#9dd1ff';
         item.style.color = '#00f';
-        item.style.zIndex = 'unset';
     });
     owlBtn.forEach(item => {
         item.style.color = '#00f';
@@ -62,7 +64,6 @@ function applyBlackStyles() {
     siteContent.forEach(item => {
         item.style.background = '#000';
         item.style.color = '#fff';
-        item.style.zIndex = 'unset';
     });
     owlBtn.forEach(item => {
         item.style.color = '#fff';
@@ -77,7 +78,6 @@ function applyBeigeStyles() {
     siteContent.forEach(item => {
         item.style.background = '#f7f3d6';
         item.style.color = 'brown';
-        item.style.zIndex = 'unset';
     });
     owlBtn.forEach(item => {
         item.style.color = 'brown';
