@@ -1,5 +1,5 @@
 const siteFont = document.querySelectorAll(".site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6");
-const siteContent = document.querySelectorAll(".site-content, .privacy-policy-popup, button, .site-content a, li, h1, h2, h3, h4, h5 , h6, figcaption, .header-top, .header-nav, .footer, .edu_by>div, .ajax__tab_header, .announcement, .news, .visiting-card-gymn a, .announcement-tabs-item, .news-tabs-item, #__tab_Tabs_34171_ctl00, #__tab_Tabs_34171_ctl01, #__tab_Tabs_34171_ctl02, #__tab_Tabs_34171_ctl03, #__tab_Tabs_34171_ctl04, #__tab_Tabs_34231_ctl00, #__tab_Tabs_34231_ctl01, #__tab_Tabs_34231_ctl02, #__tab_Tabs_34231_ctl03, #__tab_Tabs_34231_ctl04");
+const siteContent = document.querySelectorAll(".site-content, .mobile-site-nav, .privacy-policy-popup, button, .site-content a, li, h1, h2, h3, h4, h5 , h6, figcaption, .header-top, .header-nav, .footer, .edu_by>div, .ajax__tab_header, .announcement, .news, .visiting-card-gymn a, .announcement-tabs-item, .news-tabs-item, #__tab_Tabs_34171_ctl00, #__tab_Tabs_34171_ctl01, #__tab_Tabs_34171_ctl02, #__tab_Tabs_34171_ctl03, #__tab_Tabs_34171_ctl04, #__tab_Tabs_34231_ctl00, #__tab_Tabs_34231_ctl01, #__tab_Tabs_34231_ctl02, #__tab_Tabs_34231_ctl03, #__tab_Tabs_34231_ctl04");
 const siteBorder = document.querySelectorAll("div, article, hr");
 const owlBtn = document.querySelectorAll('.owl-nav button span');
 const zIndexFix = document.querySelectorAll('.header-nav, .privacy-policy-popup');
@@ -9,6 +9,12 @@ const img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit
 const crossEyeSvg = document.getElementById("cross-eye");
 const normalEyeSvg = document.getElementById("normal-eye");
 const crossEyeWhiteSvg = document.getElementById("cross-eye-white");
+const homeSvg = document.querySelectorAll('.home');
+const homeWhiteSvg = document.querySelectorAll('.home-white');
+const xMarkSvg = document.querySelector('.x-mark');
+const xMarkWhiteSvg = document.querySelector('.x-mark-white');
+const menuBurgerSvg = document.querySelector('.menu-burger');
+const menuBurgerWhiteSvg = document.querySelector('.menu-burger-white');
 const siteBody = document.querySelector('body');
 const vision = document.querySelector(".vision");
 const siteBackground = document.querySelector(".site-content");
@@ -21,6 +27,16 @@ function updateStyles() {
     normalEyeSvg.style.display = "none";
     siteBackground.style.background = "#fff";
     crossEyeWhiteSvg.style.display = "none";
+    xMarkSvg.style.display = 'block';
+    xMarkWhiteSvg.style.display = 'none';
+    menuBurgerSvg.style.display = 'block';
+    menuBurgerWhiteSvg.style.display = 'none';
+    homeSvg.forEach(item => {
+        item.style.display = 'block';
+    });
+    homeWhiteSvg.forEach(item => {
+        item.style.display = 'none';
+    });
     siteContent.forEach(item => {
         item.style.zIndex = 'unset';
     });
@@ -45,6 +61,16 @@ function applyWhiteStyles() {
 
 function applyBlueStyles() {
     updateStyles();
+    xMarkSvg.style.display = 'none';
+    xMarkWhiteSvg.style.display = 'block';
+    menuBurgerSvg.style.display = 'none';
+    menuBurgerWhiteSvg.style.display = 'block';
+    homeSvg.forEach(item => {
+        item.style.display = 'none';
+    });
+    homeWhiteSvg.forEach(item => {
+        item.style.display = 'block';
+    });
     siteBorder.forEach(item => {
         item.style.borderColor = '#00f';
     });
@@ -60,7 +86,17 @@ function applyBlueStyles() {
 function applyBlackStyles() {
     updateStyles();
     crossEyeSvg.style.display = "none";
-    crossEyeWhiteSvg.style.display = "inline-block";
+    crossEyeWhiteSvg.style.display = "block";
+    menuBurgerSvg.style.display = 'none';
+    menuBurgerWhiteSvg.style.display = 'block';
+    xMarkSvg.style.display = 'none';
+    xMarkWhiteSvg.style.display = 'block';
+    homeSvg.forEach(item => {
+        item.style.display = 'none';
+    });
+    homeWhiteSvg.forEach(item => {
+        item.style.display = 'block';
+    });
     siteBorder.forEach(item => {
         item.style.borderColor = '#fff';
     });
@@ -75,6 +111,16 @@ function applyBlackStyles() {
 
 function applyBeigeStyles() {
     updateStyles();
+    xMarkSvg.style.display = 'none';
+    xMarkWhiteSvg.style.display = 'block';
+    menuBurgerSvg.style.display = 'none';
+    menuBurgerWhiteSvg.style.display = 'block';
+    homeSvg.forEach(item => {
+        item.style.display = 'none';
+    });
+    homeWhiteSvg.forEach(item => {
+        item.style.display = 'block';
+    });
     siteBorder.forEach(item => {
         item.style.borderColor = 'brown';
     });
@@ -97,6 +143,16 @@ function deleteVisionStyles() {
     siteBody.removeAttribute("class");
     crossEyeSvg.style.display = "none";
     crossEyeWhiteSvg.style.display = "none";
+    xMarkSvg.style.display = 'none';
+    xMarkWhiteSvg.style.display = 'block';
+    menuBurgerSvg.style.display = 'none';
+    menuBurgerWhiteSvg.style.display = 'block';
+    homeSvg.forEach(item => {
+        item.style.display = 'none';
+    });
+    homeWhiteSvg.forEach(item => {
+        item.style.display = 'block';
+    });
     vision.style.display = "none";
     normalEyeSvg.style.display = "inline-block";
     localStorage.clear();

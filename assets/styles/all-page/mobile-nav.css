@@ -22,6 +22,7 @@
         width: 30px;
         align-items: center;
         justify-content: center;
+        text-align: center;
     }
 
     .header-nav-mobile .level_1 input, .header-nav-mobile .level_1 .mobile-chevron {
