@@ -15,6 +15,8 @@ const xMarkSvg = document.querySelector('.x-mark');
 const xMarkWhiteSvg = document.querySelector('.x-mark-white');
 const menuBurgerSvg = document.querySelector('.menu-burger');
 const menuBurgerWhiteSvg = document.querySelector('.menu-burger-white');
+const chevronSvg = document.querySelectorAll('.mobile-chevron.black');
+const chevronWhiteSvg = document.querySelectorAll('.mobile-chevron.white');
 const siteBody = document.querySelector('body');
 const vision = document.querySelector(".vision");
 const siteBackground = document.querySelector(".site-content");
@@ -31,6 +33,12 @@ function updateStyles() {
     xMarkWhiteSvg.style.display = 'none';
     menuBurgerSvg.style.display = 'block';
     menuBurgerWhiteSvg.style.display = 'none';
+    chevronSvg.forEach(item => {
+        item.style.display = 'inline-block';
+    });
+    chevronWhiteSvg.forEach(item => {
+        item.style.display = 'none';
+    });
     homeSvg.forEach(item => {
         item.style.display = 'block';
     });
@@ -65,6 +73,12 @@ function applyBlueStyles() {
     xMarkWhiteSvg.style.display = 'block';
     menuBurgerSvg.style.display = 'none';
     menuBurgerWhiteSvg.style.display = 'block';
+    chevronSvg.forEach(item => {
+        item.style.display = 'none';
+    });
+    chevronWhiteSvg.forEach(item => {
+        item.style.display = 'inline-block';
+    });
     homeSvg.forEach(item => {
         item.style.display = 'none';
     });
@@ -91,6 +105,12 @@ function applyBlackStyles() {
     menuBurgerWhiteSvg.style.display = 'block';
     xMarkSvg.style.display = 'none';
     xMarkWhiteSvg.style.display = 'block';
+    chevronSvg.forEach(item => {
+        item.style.display = 'none';
+    });
+    chevronWhiteSvg.forEach(item => {
+        item.style.display = 'inline-block';
+    });
     homeSvg.forEach(item => {
         item.style.display = 'none';
     });
@@ -115,6 +135,12 @@ function applyBeigeStyles() {
     xMarkWhiteSvg.style.display = 'block';
     menuBurgerSvg.style.display = 'none';
     menuBurgerWhiteSvg.style.display = 'block';
+    chevronSvg.forEach(item => {
+        item.style.display = 'none';
+    });
+    chevronWhiteSvg.forEach(item => {
+        item.style.display = 'inline-block';
+    });
     homeSvg.forEach(item => {
         item.style.display = 'none';
     });
@@ -147,6 +173,12 @@ function deleteVisionStyles() {
     xMarkWhiteSvg.style.display = 'block';
     menuBurgerSvg.style.display = 'none';
     menuBurgerWhiteSvg.style.display = 'block';
+    chevronSvg.forEach(item => {
+        item.style.display = 'none';
+    });
+    chevronWhiteSvg.forEach(item => {
+        item.removeAttribute("style");
+    });
     homeSvg.forEach(item => {
         item.style.display = 'none';
     });
