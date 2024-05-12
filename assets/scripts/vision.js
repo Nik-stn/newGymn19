@@ -162,7 +162,11 @@ function applyBeigeStyles() {
 function deleteVisionStyles() {
     imgYes.dispatchEvent(new Event("click"));
     siteFont.forEach(item => item.removeAttribute("style"));
-    siteContent.forEach(item => item.removeAttribute("style"));
+    siteContent.forEach(item => {
+        item.style.removeProperty("background");
+        item.style.removeProperty("color");
+        item.style.removeProperty("z-index");
+    });
     img.forEach(item => item.removeAttribute("style"));
     owlBtn.forEach(item => item.removeAttribute("style"));
     siteBorder.forEach(item => item.style.removeProperty("border-color"));
