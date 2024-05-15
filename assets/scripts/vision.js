@@ -21,34 +21,20 @@ const imgYes = document.getElementById("imagesYes");
 const letterSpacing = document.querySelectorAll(".changeLetterSpacing");
 
 function updateStyles() {
-    crossEyeSvg.style.display = "inline-block";
-    vision.style.display = "block";
-    normalEyeSvg.style.display = "none";
     siteBackground.style.background = "#fff";
-    crossEyeWhiteSvg.style.display = "none";
     siteContent.forEach(item => {
         item.style.zIndex = 'unset';
     });
     zIndexFix.forEach(item => {
         item.style.zIndex = '20';
     });
-    xMarkSvg.style.display = 'none';
-    xMarkWhiteSvg.style.display = 'block';
-    menuBurgerSvg.style.display = 'none';
-    menuBurgerWhiteSvg.style.display = 'block';
-    // chevronSvg.forEach(item => {
-    //     item.style.display = 'none';
-    // });
-    chevronWhiteSvg.forEach(item => {
+    [crossEyeSvg, ...chevronWhiteSvg].forEach(item => {
         item.style.display = 'inline-block';
     });
-    // homeSvg.forEach(item => {
-    //     item.style.display = 'none';
-    // });
-    homeWhiteSvg.forEach(item => {
+    [vision, xMarkWhiteSvg, menuBurgerWhiteSvg, ...homeWhiteSvg].forEach(item => {
         item.style.display = 'block';
     });
-    [...chevronSvg, ...homeSvg].forEach(item => {
+    [xMarkSvg, crossEyeWhiteSvg, normalEyeSvg, menuBurgerSvg, ...chevronSvg, ...homeSvg].forEach(item => {
         item.style.display = 'none';
     });
 }
@@ -62,21 +48,14 @@ function applyWhiteStyles() {
         item.style.background = '#fff';
         item.style.color = '#2E3332';
     });
-    xMarkSvg.style.display = 'block';
-    xMarkWhiteSvg.style.display = 'none';
-    menuBurgerSvg.style.display = 'block';
-    menuBurgerWhiteSvg.style.display = 'none';
     chevronSvg.forEach(item => {
         item.style.display = 'inline-block';
     });
-    chevronWhiteSvg.forEach(item => {
+    [xMarkWhiteSvg, menuBurgerWhiteSvg, ...homeWhiteSvg, ...chevronWhiteSvg].forEach(item => {
         item.style.display = 'none';
     });
-    homeSvg.forEach(item => {
+    [menuBurgerSvg, xMarkSvg, ...homeSvg].forEach(item => {
         item.style.display = 'block';
-    });
-    homeWhiteSvg.forEach(item => {
-        item.style.display = 'none';
     });
 }
 
@@ -118,34 +97,20 @@ function applyBeigeStyles() {
 
 function deleteVisionStyles() {
     imgYes.dispatchEvent(new Event("click"));
-    siteFont.forEach(item => item.removeAttribute("style"));
     siteContent.forEach(item => {
         item.style.removeProperty("background");
         item.style.removeProperty("color");
         item.style.removeProperty("z-index");
     });
-    img.forEach(item => item.removeAttribute("style"));
+    [...chevronWhiteSvg, ...siteFont, ...img].forEach(item => item.removeAttribute("style"));
     siteBorder.forEach(item => item.style.removeProperty("border-color"));
     siteBody.removeAttribute("class");
-    crossEyeSvg.style.display = "none";
-    crossEyeWhiteSvg.style.display = "none";
-    xMarkSvg.style.display = 'none';
-    xMarkWhiteSvg.style.display = 'block';
-    menuBurgerSvg.style.display = 'none';
-    menuBurgerWhiteSvg.style.display = 'block';
-    chevronSvg.forEach(item => {
+    [vision, crossEyeSvg, crossEyeWhiteSvg, xMarkSvg, menuBurgerSvg, ...chevronSvg, ...homeSvg].forEach(item => {
         item.style.display = 'none';
     });
-    chevronWhiteSvg.forEach(item => {
-        item.removeAttribute("style");
-    });
-    homeSvg.forEach(item => {
-        item.style.display = 'none';
-    });
-    homeWhiteSvg.forEach(item => {
+    [xMarkWhiteSvg, menuBurgerWhiteSvg, ...homeWhiteSvg].forEach(item => {
         item.style.display = 'block';
     });
-    vision.style.display = "none";
     normalEyeSvg.style.display = "inline-block";
     localStorage.clear();
 }
