@@ -134,27 +134,19 @@ function colorSiteClick(event) {
     if (id === 'colorSiteBlue') {
         applyBlueStyles();
         localStorage.setItem('applyBlueStyles', applyBlueStyles);
-        localStorage.removeItem('applyBlackStyles');
-        localStorage.removeItem('applyWhiteStyles');
-        localStorage.removeItem('applyBeigeStyles');
+        ['applyBlackStyles', 'applyWhiteStyles', 'applyBeigeStyles'].forEach(key => localStorage.removeItem(key));
     } else if (id === 'colorSiteBlack') {
         applyBlackStyles();
         localStorage.setItem('applyBlackStyles', applyBlackStyles);
-        localStorage.removeItem('applyBlueStyles');
-        localStorage.removeItem('applyBeigeStyles');
-        localStorage.removeItem('applyWhiteStyles');
+        ['applyBlueStyles', 'applyWhiteStyles', 'applyBeigeStyles'].forEach(key => localStorage.removeItem(key));
     } else if (id === 'colorSiteWhite') {
         applyWhiteStyles();
         localStorage.setItem('applyWhiteStyles', applyWhiteStyles);
-        localStorage.removeItem('applyBlackStyles');
-        localStorage.removeItem('applyBlueStyles');
-        localStorage.removeItem('applyBeigeStyles');
+        ['applyBlueStyles', 'applyBlackStyles', 'applyBeigeStyles'].forEach(key => localStorage.removeItem(key));
     } else if (id === 'colorSiteBeige') {
         applyBeigeStyles();
         localStorage.setItem('applyBeigeStyles', applyBeigeStyles);
-        localStorage.removeItem('applyBlackStyles');
-        localStorage.removeItem('applyWhiteStyles');
-        localStorage.removeItem('applyBlueStyles');
+        ['applyBlueStyles', 'applyBlackStyles', 'applyWhiteStyles'].forEach(key => localStorage.removeItem(key));
     } else console.log('Error classlist');
 }
 
@@ -177,8 +169,7 @@ function imagesNoClick(event) {
         item.style.display = "none";
     });
     localStorage.setItem('applyImgDelete', imgDelete);
-    localStorage.removeItem('applyImgColor');
-    localStorage.removeItem('applyImgBlackWhiteStyles');
+    ['applyImgColor', 'applyImgBlackWhiteStyles'].forEach(key => localStorage.removeItem(key));
 }
 
 function imagesYesClick(event) {
@@ -188,8 +179,7 @@ function imagesYesClick(event) {
         item.style.display = "inline-block";
     });
     localStorage.setItem('applyImgColor', imgColor);
-    localStorage.removeItem('applyImgDelete');
-    localStorage.removeItem('applyImgBlackWhiteStyles');
+    ['applyImgDelete', 'applyImgBlackWhiteStyles'].forEach(key => localStorage.removeItem(key));
 }
 
 function imagesBlackWhiteClick(event) {
@@ -199,8 +189,7 @@ function imagesBlackWhiteClick(event) {
         item.style.display = "inline-block";
     });
     localStorage.setItem('applyImgBlackWhiteStyles', imgBlackWhite);
-    localStorage.removeItem('applyImgColor');
-    localStorage.removeItem('applyImgDelete');
+    ['applyImgColor', 'applyImgDelete'].forEach(key => localStorage.removeItem(key));
 }
 
 function spacing() {
