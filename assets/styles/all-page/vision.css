@@ -6,6 +6,10 @@
     border-radius: 0 0 4px 4px;
 }
 
+.vision div, .vision a {
+    background: #ebebeb !important;
+}
+
 .vision-flex {
     display: flex;
     justify-content: space-around;
@@ -22,13 +26,13 @@
 }
 
 .vision-block>div {
-    color: #000;
+    color: #000 !important;
     margin-bottom: 10px;
 }
 
 .item-settings {
     display: inline-block;
-    color: #000;
+    color: #000 !important;
     border: 1px solid #525252;
     border-radius: 4px;
     padding: 0 10px;

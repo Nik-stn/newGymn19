@@ -1,11 +1,8 @@
 const siteFont = document.querySelectorAll(".site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6");
-const siteContent = document.querySelectorAll(".site-content, .mobile-site-nav, .privacy-policy-popup, button, .site-content a, li, h1, h2, h3, h4, h5 , h6, figcaption, .header-top, .header-nav, .footer, .edu_by>div, .ajax__tab_header, .announcement, .news, .visiting-card-gymn a, .announcement-tabs-item, .news-tabs-item, #__tab_Tabs_34171_ctl00, #__tab_Tabs_34171_ctl01, #__tab_Tabs_34171_ctl02, #__tab_Tabs_34171_ctl03, #__tab_Tabs_34171_ctl04, #__tab_Tabs_34231_ctl00, #__tab_Tabs_34231_ctl01, #__tab_Tabs_34231_ctl02, #__tab_Tabs_34231_ctl03, #__tab_Tabs_34231_ctl04, .MapYear, .MapMonth, .MapYear span, .MapMonth b, .archive-info-img .date");
+const siteContent = document.querySelectorAll("button, a, li, h1, h2, h3, h4, h5 , h6, figcaption, footer, div, span, b, input");
 const siteBorder = document.querySelectorAll("div, article, hr");
-const owlBtn = document.querySelectorAll('.owl-nav button span');
 const zIndexFix = document.querySelectorAll('.header-nav, .privacy-policy-popup');
-
 const img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img,  .gymn-map, .youtube, .ya-share2__list");
-
 const crossEyeSvg = document.getElementById("cross-eye");
 const normalEyeSvg = document.getElementById("normal-eye");
 const crossEyeWhiteSvg = document.getElementById("cross-eye-white");
@@ -29,6 +26,42 @@ function updateStyles() {
     normalEyeSvg.style.display = "none";
     siteBackground.style.background = "#fff";
     crossEyeWhiteSvg.style.display = "none";
+    siteContent.forEach(item => {
+        item.style.zIndex = 'unset';
+    });
+    zIndexFix.forEach(item => {
+        item.style.zIndex = '20';
+    });
+    xMarkSvg.style.display = 'none';
+    xMarkWhiteSvg.style.display = 'block';
+    menuBurgerSvg.style.display = 'none';
+    menuBurgerWhiteSvg.style.display = 'block';
+    // chevronSvg.forEach(item => {
+    //     item.style.display = 'none';
+    // });
+    chevronWhiteSvg.forEach(item => {
+        item.style.display = 'inline-block';
+    });
+    // homeSvg.forEach(item => {
+    //     item.style.display = 'none';
+    // });
+    homeWhiteSvg.forEach(item => {
+        item.style.display = 'block';
+    });
+    [...chevronSvg, ...homeSvg].forEach(item => {
+        item.style.display = 'none';
+    });
+}
+
+function applyWhiteStyles() {
+    updateStyles();
+    siteBorder.forEach(item => {
+        item.style.borderColor = '#2E3332';
+    });
+    siteContent.forEach(item => {
+        item.style.background = '#fff';
+        item.style.color = '#2E3332';
+    });
     xMarkSvg.style.display = 'block';
     xMarkWhiteSvg.style.display = 'none';
     menuBurgerSvg.style.display = 'block';
@@ -45,54 +78,15 @@ function updateStyles() {
     homeWhiteSvg.forEach(item => {
         item.style.display = 'none';
     });
-    siteContent.forEach(item => {
-        item.style.zIndex = 'unset';
-    });
-    zIndexFix.forEach(item => {
-        item.style.zIndex = '20';
-    });
-}
-
-function applyWhiteStyles() {
-    updateStyles();
-    siteBorder.forEach(item => {
-        item.style.borderColor = '#2E3332';
-    });
-    siteContent.forEach(item => {
-        item.style.background = '#fff';
-        item.style.color = '#2E3332';
-    });
-    owlBtn.forEach(item => {
-        item.style.color = '#2E3332';
-    });
 }
 
 function applyBlueStyles() {
     updateStyles();
-    xMarkSvg.style.display = 'none';
-    xMarkWhiteSvg.style.display = 'block';
-    menuBurgerSvg.style.display = 'none';
-    menuBurgerWhiteSvg.style.display = 'block';
-    chevronSvg.forEach(item => {
-        item.style.display = 'none';
-    });
-    chevronWhiteSvg.forEach(item => {
-        item.style.display = 'inline-block';
-    });
-    homeSvg.forEach(item => {
-        item.style.display = 'none';
-    });
-    homeWhiteSvg.forEach(item => {
-        item.style.display = 'block';
-    });
     siteBorder.forEach(item => {
         item.style.borderColor = '#00f';
     });
     siteContent.forEach(item => {
         item.style.background = '#9dd1ff';
-        item.style.color = '#00f';
-    });
-    owlBtn.forEach(item => {
         item.style.color = '#00f';
     });
 }
@@ -101,22 +95,7 @@ function applyBlackStyles() {
     updateStyles();
     crossEyeSvg.style.display = "none";
     crossEyeWhiteSvg.style.display = "block";
-    menuBurgerSvg.style.display = 'none';
-    menuBurgerWhiteSvg.style.display = 'block';
-    xMarkSvg.style.display = 'none';
-    xMarkWhiteSvg.style.display = 'block';
-    chevronSvg.forEach(item => {
-        item.style.display = 'none';
-    });
-    chevronWhiteSvg.forEach(item => {
-        item.style.display = 'inline-block';
-    });
-    homeSvg.forEach(item => {
-        item.style.display = 'none';
-    });
-    homeWhiteSvg.forEach(item => {
-        item.style.display = 'block';
-    });
+   
     siteBorder.forEach(item => {
         item.style.borderColor = '#fff';
     });
@@ -124,37 +103,15 @@ function applyBlackStyles() {
         item.style.background = '#000';
         item.style.color = '#fff';
     });
-    owlBtn.forEach(item => {
-        item.style.color = '#fff';
-    });
 }
 
 function applyBeigeStyles() {
     updateStyles();
-    xMarkSvg.style.display = 'none';
-    xMarkWhiteSvg.style.display = 'block';
-    menuBurgerSvg.style.display = 'none';
-    menuBurgerWhiteSvg.style.display = 'block';
-    chevronSvg.forEach(item => {
-        item.style.display = 'none';
-    });
-    chevronWhiteSvg.forEach(item => {
-        item.style.display = 'inline-block';
-    });
-    homeSvg.forEach(item => {
-        item.style.display = 'none';
-    });
-    homeWhiteSvg.forEach(item => {
-        item.style.display = 'block';
-    });
     siteBorder.forEach(item => {
         item.style.borderColor = 'brown';
     });
     siteContent.forEach(item => {
         item.style.background = '#f7f3d6';
-        item.style.color = 'brown';
-    });
-    owlBtn.forEach(item => {
         item.style.color = 'brown';
     });
 }
@@ -168,7 +125,6 @@ function deleteVisionStyles() {
         item.style.removeProperty("z-index");
     });
     img.forEach(item => item.removeAttribute("style"));
-    owlBtn.forEach(item => item.removeAttribute("style"));
     siteBorder.forEach(item => item.style.removeProperty("border-color"));
     siteBody.removeAttribute("class");
     crossEyeSvg.style.display = "none";
