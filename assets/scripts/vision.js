@@ -39,15 +39,19 @@ function updateStyles() {
     });
 }
 
-function applyWhiteStyles() {
+function applyStyles(borderColor, background, color) {
     updateStyles();
     siteBorder.forEach(item => {
-        item.style.borderColor = '#2E3332';
+      item.style.borderColor = borderColor;
     });
     siteContent.forEach(item => {
-        item.style.background = '#fff';
-        item.style.color = '#2E3332';
+      item.style.background = background;
+      item.style.color = color;
     });
+  }
+
+function applyWhiteStyles() {
+    applyStyles('#2E3332', '#fff', '#2E3332');
     chevronSvg.forEach(item => {
         item.style.display = 'inline-block';
     });
@@ -60,39 +64,17 @@ function applyWhiteStyles() {
 }
 
 function applyBlueStyles() {
-    updateStyles();
-    siteBorder.forEach(item => {
-        item.style.borderColor = '#00f';
-    });
-    siteContent.forEach(item => {
-        item.style.background = '#9dd1ff';
-        item.style.color = '#00f';
-    });
+    applyStyles('#00f', '#9dd1ff', '#00f');
 }
 
 function applyBlackStyles() {
-    updateStyles();
+    applyStyles('#fff', '#000', '#fff');
     crossEyeSvg.style.display = "none";
     crossEyeWhiteSvg.style.display = "block";
-   
-    siteBorder.forEach(item => {
-        item.style.borderColor = '#fff';
-    });
-    siteContent.forEach(item => {
-        item.style.background = '#000';
-        item.style.color = '#fff';
-    });
 }
 
 function applyBeigeStyles() {
-    updateStyles();
-    siteBorder.forEach(item => {
-        item.style.borderColor = 'brown';
-    });
-    siteContent.forEach(item => {
-        item.style.background = '#f7f3d6';
-        item.style.color = 'brown';
-    });
+    applyStyles('brown', '#f7f3d6', 'brown');
 }
 
 function deleteVisionStyles() {
