@@ -3481,3 +3481,16 @@ $('.owl-carousel.owl-banner').owlCarousel({
         }
     }
 })
+
+// const element = document.querySelector('body');
+// const styleBody = window.getComputedStyle(element);
+// let opacity = styleBody.getPropertyValue('opacity');
+// function Body () {
+// 	console.log(opacity);
+// 	if (opacity > 0) {
+// 		opacity -= 0.1;
+// 	}
+// }
+// element.style.opacity = opacity;
+
+// setInterval(Body, 1000)
