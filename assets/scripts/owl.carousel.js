@@ -3469,17 +3469,17 @@ $('.owl-carousel.owl-banner').owlCarousel({
     autoplayHoverPause:true,
 	dots:false,
 	autoWidth:true,
-	responsive:{
-        0:{
-            items:3,
-        },
-        600:{
-            items:7,
-        },
-        1000:{
-            items:10,
-        }
-    }
+	// responsive:{
+    //     0:{
+    //         items:3,
+    //     },
+    //     600:{
+    //         items:7,
+    //     },
+    //     1000:{
+    //         items:10,
+    //     }
+    // }
 })
 
 // const element = document.querySelector('body');

@@ -64,12 +64,16 @@
     position: relative;
 }
 
-.header-button:nth-child(3) {
+.header-button:nth-child(3), .header-button:nth-child(4) {
     grid-column-start: 1;
     grid-column-end: span 2;
-    width: clamp(110px, 13vw, 250px);
+    width: clamp(120px, 13vw, 250px);
     height: 52px;
     align-self: center;
+}
+
+.header-button:nth-child(4) {
+    height: 30px;
 }
 
 .header-button:hover {

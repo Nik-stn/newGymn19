@@ -47,9 +47,13 @@
     color: #fff;
 }
 
-.footer-gymn-info h3 {
+.footer-gymn-info h3, .banners-title {
     margin-bottom: 20px;
     color: #fff;
+}
+
+.banners.official .owl-carousel .owl-item img {
+    height: 100px;
 }
 
 .banners .owl-carousel .owl-item img {
