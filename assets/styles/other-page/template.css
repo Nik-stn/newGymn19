@@ -291,6 +291,10 @@
     height: auto;
 }
 
+.content-box iframe {
+    max-width: 100%;
+}
+
 
 /* Adaptive */
 @media (max-width: 1400px) {
